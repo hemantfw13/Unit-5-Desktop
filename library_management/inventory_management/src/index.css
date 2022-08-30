@@ -1,0 +1,15 @@
+.items {
+  display: inline-block;
+}
+.totalBooks {
+  margin-right: 20px;
+}
+.totalPens {
+  margin-right: 20px;
+}
+.totalNotebooks {
+  margin-right: 20px;
+}
+.totalInkpens {
+  margin-right: 20px;
+}

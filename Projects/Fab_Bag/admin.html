@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAB BAG Admin</title>
+  </head>
+  <style>
+    form {
+      display: grid;
+      grid-gap: 10px;
+      width: 30%;
+      height: 100px;
+      margin: auto;
+      padding: 5%;
+    }
+    form > input:last-child {
+      background-color: brown;
+      width: 70%;
+      height: 50px;
+    }
+    h1 {
+      color: red;
+    }
+  </style>
+  
+    <form id="form" action="">
+      <h1>Admin Page</h1>
+      <input id="image1" type="text" placeholder="image1_url" />
+
+      <input id="price" type="number" placeholder="enter price" />
+
+      <input id="name" type="text" placeholder="enter name" />
+      <input id="description" type="text" placeholder="enter description" />
+      <input type="submit" />
+    </form>
+
+  </body>
+</html>
+<script>
+  document.querySelector("form").addEventListener("submit", addItem);
+  var product = JSON.parse(localStorage.getItem("menProdData")) || [];
+  function addItem(e) {
+    e.preventDefault();
+    // console.log("here");
+    var productobj = {
+      image1: form.image1.value,
+      price: form.price.value,
+      name: form.name.value,
+      description: form.description.value,
+    };
+    product.push(productobj);
+    localStorage.setItem("menProdData", JSON.stringify(product));
+    window.alert("Product added");
+  }
+</script>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account - FAB BAG</title>
+    <style>
+      #mainDiv {
+        height: 500px;
+        width: 40%;
+        margin: auto;
+        padding: 10px;
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        border-radius: 5px;
+      }
+      #scndDiv {
+        height: 85%;
+        width: 70%;
+        margin: auto;
+        padding: 2%;
+      }
+      p {
+        text-align: center;
+        font-size: 45px;
+        font-family: sans-serif;
+        margin-bottom: 2px;
+      }
+
+      .greyTxt {
+        font-size: 18px;
+        color: grey;
+      }
+      .myBtnDiv {
+        margin-top: 5%;
+        height: 10%;
+      }
+      .myBtn {
+        width: 84%;
+        height: 100%;
+        background-color: #36559c;
+        font-size: 16px;
+        color: whitesmoke;
+        margin-left: 5%;
+        border-radius: 5px;
+        border: none;
+        text-align: left;
+        padding-left: 20px;
+      }
+      .myBtn1 {
+        width: 84%;
+        height: 100%;
+        background-color: #db231d;
+        font-size: 16px;
+        color: whitesmoke;
+        margin-left: 5%;
+        margin-top: 2%;
+        border-radius: 5px;
+        border: none;
+        text-align: left;
+        padding-left: 20px;
+      }
+      .myBtn2 {
+        width: 84%;
+        height: 100%;
+        background-color: rgb(229, 185, 95);
+        font-size: 16px;
+        color: rgb(20, 19, 19);
+        margin-left: 5%;
+        margin-top: 2%;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        padding-left: 20px;
+      }
+      .myBtn3 {
+        width: 84%;
+        height: 100%;
+        background-color: rgb(229, 185, 95);
+        font-size: 16px;
+        color: rgb(20, 19, 19);
+        margin-left: 5%;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        padding-left: 20px;
+      }
+      #viaMail {
+        display: inline-block;
+        width: 100%;
+        align-content: center;
+        text-align: center;
+      }
+      #firstHr {
+        display: inline-block;
+        width: 30%;
+      }
+      #viaMailID {
+        display: inline-block;
+        width: 25%;
+      }
+      #secondHr {
+        display: inline-block;
+        width: 30%;
+      }
+
+      #input {
+        height: 12%;
+        padding: 2%;
+        margin-left: 2.5%;
+        padding-right: 0%;
+        margin-top: 10%;
+      }
+      .inputTxt {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: left;
+        color: gray;
+      }
+      .inputBox {
+        width: 86%;
+        height: 65%;
+        margin-top: 1%;
+        font-size: 26px;
+        border-radius: 2px;
+
+        border: 1px solid rgb(184, 180, 180);
+      }
+      .inputBox:focus {
+        outline: none;
+        border-color: #303ab2;
+      }
+      #scndLast {
+        height: 10%;
+        width: 90%;
+
+        padding: 5%;
+        margin-left: 2.5%;
+        padding-right: 0%;
+        margin-top: 12%;
+        display: inline-block;
+      }
+      #loginTxt {
+        font-size: 16px;
+        display: inline-block;
+        padding-bottom: 5%;
+        color: red;
+      }
+      #checkBox {
+        height: 20px;
+        width: 20px;
+        border-radius: 5px;
+        margin-top: 10%;
+      }
+      .resetPass {
+        margin-top: 200px;
+        font-size: 16px;
+        margin-left: 70px;
+        display: inline-block;
+        text-align: right;
+      }
+      .or {
+        text-align: center;
+        font-size: 16px;
+        margin-top: 40px;
+      }
+      #firstTxt {
+        font-size: 35px;
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainDiv">
+      <div id="scndDiv">
+        <div>
+          <p id="firstTxt">Create an Account</p>
+        </div>
+
+        <div class="myBtnDiv">
+          <button class="myBtn">
+            <i class="fab fa-facebook-square"></i> Sign in with Facebook
+          </button>
+          <button class="myBtn1">
+            <i class="fab fa-facebook-square1"></i> Sign in with Google
+          </button>
+        </div>
+
+        <div id="input">
+          <p class="inputTxt">First Name</p>
+          <input type="text" id="firstname" class="inputBox" />
+          <p class="inputTxt">Last Name</p>
+          <input type="text" id="lastname" class="inputBox" />
+          <p class="inputTxt">Your Email Address</p>
+          <input type="text" id="emailAddr" class="inputBox" />
+          <p class="inputTxt">Your Password</p>
+          <input type="password" id="passWord" class="inputBox" />
+        </div>
+
+        <div id="scndLast">
+          <!-- <input type="checkbox" name="" id="checkBox" /> -->
+          <p id="loginTxt">&nbsp;</p>
+          <p class="resetPass">
+            <a href="resetpwd.html" style="color: black; text-decoration: none">
+            </a>
+          </p>
+        </div>
+
+        <div class="myBtnDiv">
+          <button class="myBtn2" id="signup">Create an Account</button>
+        </div>
+        <p class="or">Or</p>
+        <div class="myBtnDiv">
+          <button class="myBtn3" id="login">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.getElementById("signup").addEventListener("click", signUp);
+  var userArr = JSON.parse(localStorage.getItem("userData")) || [];
+  function signUp() {
+    var firstname = document.getElementById("firstname").value;
+    var lastname = document.getElementById("lastname").value;
+    var emailadd = document.getElementById("emailAddr").value;
+    var password = document.getElementById("passWord").value;
+
+    var userCredentials = {
+      yourfirstname: firstname,
+      yourlastname: lastname,
+      youremail: emailadd,
+      yourpass: password,
+    };
+    userArr.push(userCredentials);
+    localStorage.setItem("userData", JSON.stringify(userArr));
+    alert("Sucessfully Account Created !!");
+  }
+  document.getElementById("login").addEventListener("click", signIn);
+  function signIn() {
+    window.location.href = "SignIn.html";
+  }
+</script>

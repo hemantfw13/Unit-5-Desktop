@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping at Max</title>
+    <style>
+      #signup {
+        height: 50vh;
+        width: 45%;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 15px;
+        text-align: left;
+        align-items: left;
+        align-content: left;
+        padding: 2%;
+        padding-left: 5%;
+        margin-top: 7%;
+      }
+      p {
+        text-align: left;
+        font-family: sans-serif;
+        margin-bottom: 2px;
+      }
+      .mid-text {
+        font-size: 22px;
+        font-family: sans-serif;
+        text-align: left;
+      }
+      .mobile {
+        font-size: 18px;
+        font-family: sans-serif;
+        text-align: left;
+        font-weight: bold;
+      }
+      #number {
+        width: 80%;
+        height: 12%;
+        margin-top: 1%;
+        font-size: 26px;
+      }
+      #hr {
+        width: 80%;
+        border-radius: 15%;
+        margin-top: 2%;
+        margin-left: 3%;
+      }
+      #lastBox {
+        height: 15%;
+        width: 90%;
+
+        display: inline-block;
+      }
+      .inl {
+        display: inline-block;
+      }
+      #withMail {
+        width: 40%;
+
+        height: 60%;
+        vertical-align: top;
+      }
+      #btn {
+        width: 220px;
+        background-color: #303ab2;
+        border: none;
+        margin-left: 28%;
+        height: 60px;
+        color: whitesmoke;
+        font-size: 35px;
+        border-radius: 10px;
+        font-family: sans-serif;
+      }
+      .mail {
+        font-size: 20px;
+      }
+      #otp {
+        display: inline-block;
+        height: 15%;
+        align-items: center;
+      }
+      .otpBox {
+        display: inline-block;
+        width: 10%;
+        height: 70%;
+        margin-top: 1%;
+        font-size: 26px;
+        text-align: center;
+      }
+
+      .otpBox:focus {
+        outline: none;
+        border-color: #303ab2;
+      }
+      #black {
+        font-weight: bold;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="signup">
+      <p style="font-size: 38px">Enter OTP</p>
+      <p class="mid-text" style="font-size: 12px">
+        Check you mobile for a 6 digit secret OTP & enter that here. Please do
+        not share the code with anybody else
+      </p>
+      <p class="mobile" style="font-size: 12px">OTP</p>
+      <div id="otp">
+        <input type="text" name="" class="otpBox" />
+        <input type="text" name="" class="otpBox" />
+        <input type="text" name="" class="otpBox" />
+        <input type="text" name="" class="otpBox" />
+        <input type="text" name="" class="otpBox" />
+        <input type="text" name="" class="otpBox" />
+      </div>
+      <p class="mid-text" id="black" style="font-size: 14px">
+        <a href=""> Didn't get it? resend</a>
+      </p>
+      <hr id="hr" />
+      <div id="lastBox">
+        <div id="withMail" class="inl">
+          <p class="mail" style="font-size: 14px">
+            Login with email? &nbsp;<a href="sign.html">Click here</a>
+          </p>
+        </div>
+        <div id="continueBtn" class="inl">
+          <button id="btn"><a href="index.html">Continue</a></button>
+        </div>
+      </div>
+    </div>
+    <!-- <h1>Signup</h1>
+    <input type="email" id="email" placeholder="Enter your email id here" class="inputBox">
+    <input type="password" id="pass" placeholder="Enter password here" class="inputBox">
+    <input type="text" id="user" placeholder="Enter your Username" class="inputBox">
+    <input type="number" id="number" placeholder="Enter your mobile number here" class="inputBox">
+    <button>Submit</button>
+    </div> -->
+  </body>
+</html>
+
+<script>
+  // document.querySelector("button").addEventListener("click", signUp);
+  // var userArr = JSON.parse(localStorage.getItem("userData")) || [];
+
+  // function signUp(){
+  //     var email = document.getElementById("email").value;
+  //     var pass = document.getElementById("pass").value;
+  //     var user = document.getElementById("user").value;
+  //     var mobile = document.getElementById("number").value;
+
+  //     var userCredentials = {
+  //         emailAddress: email,
+  //         passWord: pass,
+  //         userName: user,
+  //         mobileNo: mobile,
+  //     };
+  //     userArr.push(userCredentials);
+  //     localStorage.setItem("userData", JSON.stringify(userArr));
+  //     window.location.href = "signin.html";
+  // }
+</script>

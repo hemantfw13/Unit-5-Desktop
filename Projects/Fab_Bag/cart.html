@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/36165df214.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>FAB BAG CART PAGE</title>
+    <style>
+      .container {
+        /* border: 1px solid red; */
+        height: 450px;
+        width: 80%;
+        margin: auto;
+      }
+      .innercont {
+        /* border: 1px solid blue; */
+        height: 350px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        /* grid-gap: 10px; */
+      }
+      .name {
+        font-size: 30px;
+        color: rgb(32, 31, 31);
+      }
+      .left {
+        /* border: 1px solid teal; */
+        height: 300px;
+        width: 800px;
+        margin: left;
+      }
+      .right {
+        /* border: 1px solid green; */
+        height: 300px;
+        width: 410px;
+      }
+      .uperleft {
+        /* border: 1px solid grey; */
+        height: 25%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 82% 10% 15%;
+      }
+      .lowerleft {
+        /* border: 1px solid rgb(128, 79, 79); */
+        height: 70%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 50% 8% 12%;
+      }
+      .lowerleftdiv {
+        /* border: 1px solid red; */
+        height: 70%;
+        font-size: 19px;
+      }
+      .lowerimg {
+        width: 100%;
+        height: 100%;
+      }
+      .rightupper {
+        /* border: 1px solid grey; */
+        height: 20%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        padding-top: 18px;
+      }
+      .rigthbtn1 {
+        background-color: rgb(32, 31, 31);
+        border-radius: 2px;
+        border: 0px;
+        height: 45px;
+        color: white;
+        width: 90%;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      .rigthbtn2 {
+        background-color: rgb(229, 185, 95);
+        border-radius: 2px;
+        border: 0px;
+        height: 45px;
+        color: white;
+        width: 90%;
+        font-size: 14px;
+      }
+      .lasthead1 {
+        font-size: 20px;
+
+        color: black;
+      }
+      .one {
+        height: 120px;
+        width: 100%;
+        text-align: center;
+        padding-top: 80px;
+        font-size: 30px;
+        /* //color: grey; */
+        /* padding-left: 115px; */
+      }
+      .one1 {
+        height: 120px;
+        vertical-align: top;
+        text-align: center;
+      }
+      #greylink {
+        color: #928477;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 30px;
+      }
+      .emailsub {
+        height: 150x;
+        width: 800px;
+        margin-top: 15px;
+      }
+      .newbutton {
+        background-color: rgb(229, 185, 95);
+        border-radius: 1px;
+        border: 0px;
+        height: 40px;
+        width: 150px;
+        color: whitesmoke;
+        margin: auto;
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+        border-radius: 10px;
+      }
+      .sub {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+        color: rgb(160, 159, 159);
+      }
+      #box {
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        height: 250px;
+        width: 90%;
+        margin: auto;
+        margin-left: 10%;
+        margin-top: 80px;
+        grid-column-gap: 80px;
+      }
+      .upperblack {
+        height: 40px;
+        text-align: center;
+        width: 100%;
+        background-color: rgb(22, 21, 21);
+        color: aliceblue;
+        padding-top: 15px;
+        font-size: 20px;
+      }
+      .subscribeLOGOBar {
+        height: 100px;
+        width: 100%;
+        /* border: 1px solid blue; */
+        display: grid;
+        grid-template-columns: 25% 60% 15%;
+      }
+      .subcribe {
+        /* border: 1px solid red; */
+        height: 100px;
+        font-size: 30px;
+        text-align: center;
+        text-decoration: none;
+        background-color: white;
+        color: rgb(229, 185, 95);
+        font-weight: bold;
+        border: none;
+      }
+
+      .fabbagLOGO {
+        /* border: 1px solid red; */
+        height: 100px;
+        margin: auto;
+      }
+      .searchbar {
+        /* border: 1px solid red; */
+        height: 100px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        font-size: 28px;
+        color: rgb(229, 185, 95);
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="upperblack">
+      AVAILABLE NOW - THE BEAUTY RESOLUTION JANUARY FAB BAG!
+    </div>
+    <div class="subscribeLOGOBar">
+      <button class="subcribe">SUBSCRIBE NOW</button>
+      <div class="fabbagLOGO">
+        <a href="homepage.html"
+          ><img
+            style="
+              width: 250px;
+              height: 50px;
+
+              margin-top: 15px;
+            "
+            src="https://cdn.shopify.com/s/files/1/0052/7551/6995/files/FABBAG-LOGO-FINAL.png?10137"
+            alt=""
+        /></a>
+      </div>
+      <div class="searchbar">
+        <i id="searchSymbol" class="fas fa-search"></i>
+
+        <a href="cart.html"><i id="favSymbol" class="far fa-heart"></i> </a>
+        <div id="accountSymbol"><i class="far fa-user-circle"></i></div>
+        <a href="cart.html"> <i class="fas fa-shopping-cart"></i> </a>
+      </div>
+    </div>
+    <div class="container">
+      <p class="name">My Cart</p>
+      <div class="innercont">
+        <div class="left">
+          <div class="uperleft">
+            <p class="upperleftname">PRODUCT</p>
+            <p class="upperleftname">QTY</p>
+            <p class="upperleftname">PRICE</p>
+          </div>
+          <div class="lowerleft">
+            <div class="lowerleftdiv">
+              <img
+                class="lowerimg"
+                src="https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPage-Skincare-Reveal--3.png?v=1641707966"
+                alt=""
+              />
+            </div>
+            <div class="lowerleftdiv">
+              <p style="margin-top: 50px">
+                The Beauty Resolution January Fab Bag 1 Month
+              </p>
+            </div>
+            <div class="lowerleftdiv">
+              <div class="qty">
+                <p style="margin-top: 50px; margin-left: 25%">1</p>
+              </div>
+            </div>
+            <div class="lowerleftdiv">
+              <p style="margin-top: 50px">Rs.599.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="rightupper">
+            <div class="totalpricename">TOTAL PRICE :</div>
+            <div class="totalvalue">Rs.599.00</div>
+          </div>
+          <button id="btn1" class="rigthbtn1">UPDATE CART</button>
+          <br />
+          <button id="btn2" class="rigthbtn2">CHECKOUT</button>
+        </div>
+      </div>
+    </div>
+    <div id="box">
+      <div>
+        <ul type="none">
+          <li><p class="lasthead1">INFORMATION</p></li>
+          <a id="greylink" href=" "><li>About Us</li></a>
+          <a id="greylink" href=" "><li>Associated Brands</li></a>
+          <a id="greylink" href=" "><li>FAQ</li></a>
+          <a id="greylink" href=" "><li>Collaborate with Fag Bag</li></a>
+          <a id="greylink" href=" "><li>Contact Us</li></a>
+          <a id="greylink" href=" "><li>Return & Refunds</li></a>
+          <a id="greylink" href=" "><li>Terms & Conditions</li></a>
+          <a id="greylink" href=" "><li>Privacy Policy</li></a>
+        </ul>
+      </div>
+      <div>
+        <ul type="none">
+          <li><p class="lasthead1">CUSTOMER CARE</p></li>
+          <a id="greylink" href=""
+            ><li>Call : 022-6805-6010 (Monday to Friday : 9 AM - 7 PM).</li></a
+          >
+          <a id="greylink" href=" "><li>Mail : crew@fabbag.com</li></a>
+        </ul>
+      </div>
+      <div>
+        <ul type="none">
+          <li><p class="lasthead1">NEWSLETTER</p></li>
+          <a id="greylink" href=" "
+            ><li>Signup for the latest offers, updates and news</li></a
+          >
+          <li>
+            <div class="emailsub">
+              <input type="email" placeholder="Please enter an email address" />
+              <button class="newbutton">SUBSCRIBE</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="one">
+      <i class="fab fa-facebook-f facebook"></i>
+      <i class="fab fa-twitter facebook"></i>
+      <i class="fab fa-instagram facebook"></i>
+    </div>
+
+    <div class="one1">
+      <p class="sub">Copyright © 2021 fabbag.com All rights reserved.</p>
+    </div>
+  </body>
+</html>
+<script>
+  document.getElementById("btn1").addEventListener("click", updatesCart);
+  function updatesCart() {
+    window.location.href = "cart.html";
+  }
+  document.getElementById("btn2").addEventListener("click", checkout);
+  function checkout() {
+    window.location.href = "checkout.html";
+  }
+</script>

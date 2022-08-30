@@ -1,0 +1,90 @@
+{
+    "meetups": [
+      {
+        "id": 1,
+        "title": "Saunter Strech",
+        "location": "bangalore",
+        "date": "2022-03-30",
+        "time": "23:59",
+        "theme": "technology",
+        "description": "Random Event",
+        "image": "https://images.unsplash.com/photo"
+      },
+      {
+        "id": 2,
+        "title": "Kolkata event",
+        "location": "Kolkata",
+        "date": "2022-03-27",
+        "time": "23:59",
+        "theme": "technology",
+        "description": "Random Event",
+        "image": "https://images.unsplash.com/photo"
+      },
+      {
+        "id": 3,
+        "title": "Delhi event",
+        "location": "delhi",
+        "date": "2022-03-28",
+        "time": "23:59",
+        "theme": "technology",
+        "description": "Random Event",
+        "image": "https://images.unsplash.com/photo"
+      },
+      {
+        "id": 4,
+        "title": "mumbai Strech",
+        "location": "mumbai",
+        "date": "2022-03-29",
+        "time": "23:59",
+        "theme": "technology",
+        "description": "Random Event",
+        "image": "https://images.unsplash.com/photo"
+      }
+     
+    ],
+    "users": [
+      {
+        "name": "Samuel",
+        "password": "secret",
+        "location": "bangalore",
+        "interests": [
+          "technology",
+          "food",
+          "movies",
+          "culture",
+          "art",
+          "drama"
+        ],
+        "image": "https://images.unsplash.com/photo",
+        "id": 1,
+        "subscribed": [
+          1,
+          5
+        ]
+      },
+      {
+        "name": "pens",
+        "password": "123132",
+        "location": "kolkata",
+        "technology": false,
+        "food": true,
+        "movies": false,
+        "culture": true,
+        "art": false,
+        "drama": false,
+        "image": "asasdsa",
+        "id": 2
+      },
+      {
+        "name": "pens12",
+        "password": "123132",
+        "location": "kolkata",
+        "interests": [
+          "culture",
+          "food"
+        ],
+        "image": "asasdsa",
+        "id": 3
+      }
+    ]
+  }

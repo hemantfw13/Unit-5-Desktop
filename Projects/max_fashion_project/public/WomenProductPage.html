@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.typekit.net/emv3zbo.css" rel="stylesheet" crossorigin="anonymous">
+    <title>Online Shopping at Max</title>
+    <script src="https://kit.fontawesome.com/9d470135d0.js" crossorigin="anonymous"></script>
+    <style>
+      body{
+        margin: 5px;
+      }
+   /* <-----------HEAD-------------> */
+         #header{
+             width: 100%;
+             /* height: 74px;
+             font-size: 30px;
+             text-align: center; */
+             background-color: #FFFFFF;
+             margin: 0px;
+             font-size: 14px;
+             font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+             font-weight: 560;
+         }
+         .vehicle{
+                font-size:20px;
+                color:white;
+                margin-right: 10px;
+              }
+              .basket{
+                font-size:20px;
+                color: #000000;
+                margin-top: 10px;
+              }
+              .facebook{
+                font-size:35px;
+                color: #000000;
+                margin-top: 30px;
+                margin-right: 20px;
+              }
+              
+              .phone{
+                font-size:35px;
+                color: #000000;
+                margin-right: 10px;
+              
+              }
+      #box {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          height: 250px;
+          width: 90%;
+          margin: auto;
+          margin-left: 10%;
+          margin-top: 60px;
+          
+        }
+       .navbar>ul{
+            width: 100%;
+              list-style: none;
+              position: relative;
+              margin: 0;
+              padding: 8px 0 0 0;
+              float: left;
+              background-color:white;
+      
+        }
+        .navbar ul a{
+              text-decoration: none;
+              padding: 0 20px;
+              line-height:40px;
+              display: block;
+        }
+        .navbar ul li{
+              float: left;
+              position: relative;
+              margin: 0;
+      
+         }
+         .navbar > ul> li:nth-child(6){
+             background-color: #EBEBEB;
+             /* margin-left: 15px; */
+             width: 30%;
+             /* margin-right: 2%; */
+         }
+         .navbar >ul>li:nth-child(7){
+              margin-left: 11%;
+         }
+        .navbar ul ul{
+              position:fixed;
+              background-color: white;
+              display:none;
+         }
+        .navbar ul ul li{
+              display: flex;
+              position: relative;
+              float: left;
+              justify-content: space-evenly;
+      
+         }
+        .navbar ul li:hover ul{
+              display: flex;
+              display: block;
+              float: left;
+              left: 0;
+              
+        }
+        .search{
+                font-size:20px;
+                color: #000000;
+                color:gray; 
+                background-color:rgb(235, 235, 235);
+                padding: 10px;
+                margin-left: 0px;
+              }
+        #first ul {
+          display: flex;
+          justify-content: space-evenly;
+          padding: 8px;
+          margin: 0px;
+        }
+        #first {
+          background-color: black;
+        }
+        #whitelink{
+          color: white;
+          text-decoration: none;
+          font-size: 12px;
+          font-family: "Open Sans", sans-serif;
+          margin-top: 1px;
+        }
+        
+        #blacklink{
+          color: #000000;
+          text-decoration: none;
+          margin-left: 10px;
+          
+        }
+        
+        input[type*="c"] {
+          width: 86%;
+          height: 40px;
+          background-color: rgb(235, 235, 235);
+          margin-top: 1px;
+          border: none;
+          /* margin-right: 100px;
+          margin-left: 5px; */
+          font-size: 14px;
+          font-family: "Open Sans", sans-serif;
+        }
+        input[type*="c"]:focus {
+            outline: none;
+        }
+        #otherblacklink{
+          color: black;
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: bolder;
+          font-family: "Open Sans", sans-serif;
+          padding-left: 10px;
+        }
+        
+        .blank {
+          color: white;
+        }
+   /* <-------------NAV------------------> */
+         .nav{
+            display: flex;
+            padding: 5px 0px;
+            
+            margin-top: 90px;
+            flex-wrap: wrap;
+            align-items: center;
+            font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+            border-top: 1px solid rgba(0, 0, 0, 0.171);
+         }
+         .nav > li{
+            list-style-type: none;
+            padding: 3px;
+            font-size: 13px;
+         }
+         .nav > li > a {
+            text-decoration: none;
+            color: #929391;
+         }
+        
+     /* <-----------------> */
+
+     /* <-------------headtitle------------> */
+      .headtitle{
+        font-size: 32px;
+        font-weight: lighter;
+        font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+      }
+      .headtitle > a{
+        text-decoration: none;
+        color: #000000;
+      }
+    /* <------------------------------------> */
+     
+    /* <------------sort----------> */
+      .sortby{
+          display :flex;
+          flex-flow : row wrap;
+          color: #5d5e5c;
+          background-color: whitesmoke;
+          padding: 5px 0px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+      .sortby > div {
+            width: 192px;
+            margin:10px;
+            border: 1px solid rgba(128, 128, 128, 0.123);
+            font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+            font-weight: normal;
+      }
+      .sortby > div > select {
+          width: 192px;
+          padding: 7px;
+          border: none; 
+          font-size: 12px;  
+          color: #5d5e5c;  
+      }
+   /* <---------------------------> */
+   .sortByPr{
+        font-family: ProximaNova-Semibold, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; 
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .sortByPr > label{
+        color: #929391;
+        padding-right:10px;
+        font-size: 14px;
+    }
+     #sortByPrice{ 
+            border: 1px solid rgba(66, 64, 64, 0.383);
+            padding:5px;
+            padding-right: 20px;
+     }
+     #sortByPrice > option{
+          background-color: #ffffff;
+          color: black;
+          margin: 10px; 
+          font-size: 14px;
+      }
+   /* <--------------Product Page------------------> */
+     #menProd{
+         display : flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content:flex-start;
+         margin-bottom: 60px;
+     }
+     #menProd > .prodSubdiv{
+         width : 23%;
+         padding: 6px;
+         margin: 10px auto;
+     }
+     .prodImg{
+         width: 100%;
+     }
+     .prodPrice{
+         margin-top: 3px;
+         margin-bottom: 5px;
+         padding-top:5px;
+         font-size: 16px;
+         font-weight: bold;
+         font-family: ProximaNova-Semibold, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+     }
+    .textdiv > a{
+        text-decoration: none;
+        color: black;
+        font-family: ProximaNova-Regular,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";                
+        font-weight: 100; 
+        font-size: 14px;
+        padding-top: 10px;
+        margin-top:10px; 
+    }
+    /* <----------imgHover-------> */
+    .imgbox {
+        position: relative;
+        display: inline-flex;
+    }
+    /* Next & previous buttons */
+    .heart{
+        cursor: pointer;
+        position: absolute;
+        top: 5%; 
+        right:15px;
+        padding: 10px;
+        
+        background-color: whitesmoke;
+        border-radius: 50%;
+        /* transition: 0.6s ease; */
+        user-select: none;  
+    }
+
+    .prev, .next {
+        display:none;
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        padding:7px;
+        color:white;
+        border-radius: 50%;
+        margin: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+        font-size: 10px;
+        transition: 0.6s ease;
+        /* border-radius: 0 3px 3px 0; */
+        user-select: none;
+    }
+    /* Position the "next button" to the right */
+    .next {
+    right: 0;
+    }
+    .new{
+        position: absolute;
+        bottom: 0px;
+        right: 7px;
+        color: black;
+        background-color: white;
+        opacity: 0.95;
+        padding: 5px 8.5px;
+        font-size: 12px;
+        text-align: center;
+        font-family: ProximaNova-Bold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        line-height: 17px;
+        border-radius: 2px;
+        letter-spacing: 0.5px;
+    }
+    /*---product page div3--*/
+      .div3{
+          display:none;
+          grid-template-areas: "div3b1 div3b2"
+                                "div3b3 div3b3";
+          font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+          font-size: 12px;
+          grid-gap: 6px;
+          margin-top: 10px;
+          position:relative;
+    }
+      .div3 > .div3b1{
+            grid-area:div3b1;
+            border: 1px solid rgba(66, 64, 64, 0.383);
+            padding:10px;
+            
+      }
+      .div3 > .div3b2{
+            grid-area:div3b2;
+            padding-left: 10%;
+            color: #929391;
+            border: 1px solid rgba(66, 64, 64, 0.383);
+            font-size: 12px;
+      }
+      .div3 > .div3b3{
+            grid-area:div3b3;
+            padding:10px;
+            border: none;
+            background-color :rgba(0, 0, 255, 0.819);
+            color:white;
+            font-weight:bold;
+      }
+      .div3 > .div3b3:hover{
+        background-color :rgba(0, 0, 255, 1);
+      }
+      .div3b2 > option{
+          background-color: #ffffff;
+      }
+/* <--------------------------------------------> */
+ 
+/* <----------------Media Query---------------------> */
+
+@media screen and (min-width: 403px) and (max-width:615px) {
+    #menProd > .prodSubdiv{
+         width : 47%;
+     }
+}
+@media screen and (min-width: 0px) and (max-width: 403px) {
+    #menProd > .prodSubdiv{
+         width : 98%;
+     }
+}
+    /* <--------------foooter style----------------> */
+
+        #box {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          /* width: 1000px; */
+          margin-top: 60px;
+          border-top: 1px solid rgb(236, 237, 235);
+          padding-top: 48px;
+          padding-bottom: 40px;
+        }
+        #box2 {
+          display: grid;
+          grid-template-columns: 45% 45%;
+          row-gap: 10px;
+          /* width: 1300px; */
+          column-gap: 10%;
+          border-top: 1px solid rgb(236, 237, 235);
+          margin: 10px;
+          padding-top: 50px;
+        }
+      .head {
+          font-size: 24px;
+          font-family: ProximaNova-Bold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";          font-weight: normal;
+          line-height: 1.5;
+          padding-left: 15px;
+          font-weight: bold;
+          margin: 0;
+      }
+      .head2 {
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        padding-left: 15px;
+        margin: 0px;
+      }
+      .sub {
+        font-size: 16px;
+        font-family: ProximaNova-Regular,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        font-weight: 400;
+        color: rgb(160, 159, 159);
+        padding-left: 15px;
+        margin: 0;
+          line-height: 1.5;
+      }
+      input[type="email"] {
+        width: 60%;
+        background-color: rgb(236, 232, 232);
+        margin-top: 5px;
+        border: none;
+        height: 56px;
+        padding: 8px 15px;
+        font-size: 16px;
+        background-color: #F7F8F7 !important;
+      }
+      .emailsub {
+        display:inline-block;
+        /* height: 90x; */
+        /* margin-top: 15px; */
+      }
+      .newbutton {
+        background-color: black;
+        border-radius: 1px;
+        border: 0px;
+        height: 55px;
+        width: 30%;
+        color: whitesmoke;
+        margin: auto;
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .playstore {
+        height: 90x;
+        width: 350px;
+       
+        margin-top: 20px;
+       
+
+      }
+      .applestore{
+        height: 66px;
+        width: 172px;
+        background-image: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/en/app-store-badge-us-black.svg);
+        display:inline-block;
+        background-repeat: no-repeat;
+        /* background-size: 200px 65px; */
+        /* vertical-align: top; */
+        /* margin-top: 5px; */
+
+      }
+      .play{
+        
+        height: 66px;
+        width: 172px;
+        background-image: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/en/google-play-badge-us.svg);
+        display:inline-block;
+        background-repeat: no-repeat;
+        /* background-size: 200px 75px; */
+        /* vertical-align: top; */
+
+      }
+      .lasthead{
+        font-size: 16px;
+        font-family: ProximaNova-Semibold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        font-weight: bold;
+        line-height: 1.6;
+        font-family: ProximaNova-Bold,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+      }
+      #greylink{
+        color: #5d5e5c;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: ProximaNova-Regular,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        font-weight: 400;
+        line-height: 1.75;
+      }
+      
+      #lastbox{
+        display: grid;
+        border-top:1px solid rgb(206, 206, 206);
+        border-bottom:1px solid rgb(206, 206, 206);
+        /* height: 250px; */
+        /* width: 1350px; */
+        /* margin-left: 250px; */
+        
+        
+      }
+        .contact{
+          border:bottom;
+          /* height: 125px; */
+          /* width: 1350px; */   
+          display:inline-block;
+          border-top: 1px solid rgb(236, 237, 235);
+          border-top: 1px solid rgb(236, 237, 235);
+          padding-top: 18px;
+          /* border-right-color: rgb(236, 237, 235);
+          border-bottom-color: rgb(236, 237, 235);
+          border-left-color: rgb(236, 237, 235); */
+          padding-bottom: 18px;  
+          /* background-color: whitesmoke; */
+        }
+        .one{
+          /* height:120px; */
+          /* width:215px; */
+          display:inline-block;
+          vertical-align: center;
+          padding: 10px 0px 15px 5% ;
+        }
+        .one:nth-last-child(1){
+           position: absolute;
+           right: 10px;
+           margin-left: auto;
+        }
+        .one1{
+          display:inline-block;
+          padding-top: 24px;
+          padding-bottom: 24px;
+          /* padding-left: 300px; */
+        }
+        .vehicle{
+          font-size:20px;
+          color:white;
+          margin-right: 10px;
+        }
+        .basket{
+          font-size:20px;
+          color: #000000;
+          margin-top: 10px;
+        }
+        .facebook{
+          font-size:24px;
+          color: #000000;
+          margin-top: 30px;
+          margin-right: 20px;
+        }
+        .search{
+           
+          /* margin-left: 50px; */
+          color: #929391;
+          /* height: 56px; */
+          /* padding: 18px 24px; */
+          font-size: 16px;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+        .phone{
+          font-size:35px;
+          color: #000000;
+          margin-right: 10px;
+        
+        }
+/* <------------------------------------------------------>*/
+    </style>
+</head>
+<body>
+<!-- <---------------------Header-------------------------------->
+<div id="header">
+  <div id="first">
+    <ul>
+      <li> 
+        <i class="fas fa-truck vehicle"></i>
+        <a id="whitelink" href="">Free Shipping</a>
+      </li>
+      <li>
+        <i class="fas fa-store-alt vehicle"></i>
+        <a id="whitelink"  href="">Return To Store</a></li>
+      <li>
+        <i class="fas fa-store-alt vehicle"></i>
+        <a id="whitelink"  href="">Click & collect</a></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li><a id="whitelink"  href="">Download Our Apps</a></li>
+      <li><a id="whitelink"  href="">Store Locator</a></li>
+      <li><a id="whitelink"  href="">Help</a></li>
+    </ul>
+  </div>
+
+  <div class="navbar">
+    <ul>
+      <li><a href="index.html">
+        <img width="101px" height="50px" src="https://i1.lmsin.net/website_images/logos/max/ae/en/logo-max.svg">
+      </a></li>
+      <li>
+        <a id="blacklink" href="Women.html">Women </a>
+        <ul>
+          <li><a  id="blacklink" href="">Tops</a></li>
+          <li><a  id="blacklink" href="">Bottoms</a></li>
+          <li><a  id="blacklink" href="">Dresses & Jumpsuits</a></li>
+          <li><a  id="blacklink" href="">Sportswear</a></li>
+          <li><a  id="blacklink" href="">Winterwear</a></li>
+          <li><a  id="blacklink" href="">Ethnic Wear</a></li>
+          <li><a  id="blacklink" href="">Lingerie</a></li>
+          <li><a  id="blacklink" href="">Sleepwear</a></li>
+          <li><a  id="blacklink" href="">Accessories</a></li>
+          <li><a  id="blacklink" href="">Shoes</a></li>
+        </ul>
+      </li>
+      <li>
+        <a id="blacklink"  href="mensfront.html">Men </a>
+        <ul>
+          <li><a  id="blacklink" href="">Bottoms</a></li>
+          <li><a  id="blacklink" href="">Sportswear</a></li>
+          <li><a  id="blacklink" href="">Tops</a></li>
+          <li><a  id="blacklink" href="">Loungewear</a></li>
+          <li><a  id="blacklink" href="">Innerwear</a></li>
+          <li><a  id="blacklink" href="men.html">Indian Wear</a></li>
+          <li><a  id="blacklink" href="">Accessories</a></li>
+          <li><a  id="blacklink" href="">Shoes</a></li>
+          <li><a  id="blacklink" href="">Winterwear</a></li>
+          <li><a  id="blacklink" href="">The Shirt Shop</a></li>
+          <li><a  id="blacklink" href="">More</a></li>
+        </ul>
+      </li>
+      <li>
+        <a id="blacklink"  href="girls.html"> Girls</a>
+
+        <ul>
+          <li><a id="blacklink" href="">Tops</a></li>
+          <li><a id="blacklink" href="">Bottoms</a></li>
+          <li><a id="blacklink" href="">Essentials</a></li>
+          <li><a id="blacklink" href="">Accessories</a></li>
+          <li><a id="blacklink" href="">Shoes</a></li>
+          <li><a id="blacklink" href="">Indian Wear</a></li>
+          <li><a id="blacklink" href="">Winterwear</a></li>
+          <li><a id="blacklink" href="">More</a></li>
+        </ul>
+      </li>
+      <li>
+        <a id="blacklink"  href="boys.html"> Boys</a>
+                  <ul>
+          <li><a  id="blacklink" href="">Tops</a></li>
+          <li><a  id="blacklink" href="">Bottoms</a></li>
+          <li><a  id="blacklink" href="">Essentials</a></li>
+          <li><a  id="blacklink" href="">Accessories</a></li>
+          <li><a  id="blacklink" href="">Shoes</a></li>
+          <li><a  id="blacklink" href="">Indian Wear</a></li>
+          <li><a  id="blacklink" href="">Winterwear</a></li>
+          <li><a  id="blacklink" href="">More</a></li>
+        </ul>
+      </li>
+      <li>
+        <i class="fas fa-search search"></i>
+        <input id="search" type="text c" placeholder="What are you looking for?" /></li>
+           <li><a id="blacklink" href="Signup.html"> Sign Up - Sign In</a></li>
+        <li><a id="blacklink" href="basket.html">Basket</a></li>  
+        <i class="fas fa-lock basket"></i>
+    </ul>
+  </div>
+</div>
+    <ol class="nav">
+        <li>
+            <a href="">Home</a>
+        </li>
+        <li>
+            <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/right-pointer.svg" width="8px">
+        </li>
+        <li>
+            <a class="" href="">Women</a>
+        </li>
+        <li>
+            <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/right-pointer.svg" width="8px">
+        </li>
+        <li>
+            <a class=" " href="">Indian Wear</a>
+        </li>
+    </ol>
+<!----------------------------------------------------->
+    <div>
+        <h1 class="headtitle">
+            <a class="" href="">Indian Wear</a>
+        </h1>
+    </div>
+<!----------------------Sort------------------------------->
+<div class="sortby">
+    <div>
+        <select>
+            <option value="Price">Price</option>
+            <option value="low">Low To High</option>
+            <option value="medium">High To Low</option>
+        </select></div>
+    <div>
+        <select>
+            <option value="style">Style</option>
+            <option value="traditional">traditional</option>
+            <option value="casual">Casual</option>
+            <option value="occasion">Occasion</option>
+        </select></div>
+    <div>
+        <select>
+            <option value="Price">Design</option>
+            <option value="printed">Printed</option>
+            <option value="solid">Solid</option>
+            <option value="textured">Textured</option>
+            <option value="stripes">Stripes</option>
+        </select></div>
+    <div>
+        <select>
+            <option value="size">Size</option>
+            <option value="m">M</option>
+            <option value="
+            l">L</option>
+            <option value="s">S</option>
+            <option value="xl">XL</o option>
+            <option value="XXL">XXL</option>
+        </select></div>
+    <div>
+        <select>
+            <option value="color">Color</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="white">White</option>
+        </select></div>
+    <div>
+        <select>
+            <option value="Price">Sleeve Length</option>
+            <option value="full Sleeves">Full Sleeves</option>
+            <option value="half Sleeves">Half Sleeves</option>
+        </select></div>
+    <div>
+        <select>
+            <option value="browse">Browse</option>
+            <option value="new">New</option>
+            <option value="online only">Online Online</option>
+        </select></div>
+    <div>
+        <select>
+            <option value="promotions">Promotions</option>
+        </select></div>
+    <div>
+        <select>
+            <option value="fit">Fit</option>
+            <option value="regular">Regular</option>
+            <option value="slim">Slim</option>
+            <option value="comfort">Comfort</option>
+        </select></div>
+</div>
+ <!------------------------------------------------------>
+<div class="sortByPr">
+    <label for="">Sort by</label> 
+    <select id="sortByPrice" onchange="handlePriceSort()" >
+        <option value="rel">Relevance</option>
+        <option value="new">New Arrival</option>
+        <option value="low">Low To High</option>
+        <option value="high">High To Low</option>
+    </select>
+</div>
+<!-- <---------------DISPLAY MEN PRODUCTS---------------------->
+  <div id="menProd">
+    
+  </div>
+<!------------------------------------------------------------->
+<!-- <----------------footer---------------->
+<div id="box2">
+    <div>
+      <p class="head">Subscribe to our awesome emails.</p>
+      <p class="sub">
+        Get our latest offers and news straight in your inbox.
+      </p>
+    </div>
+
+    <div>
+      <p class="head">Download our apps</p>
+      <p class="sub">Shop our products and offers on the go.</p>
+    </div>
+    <div class="emailsub">
+      <input type="email" placeholder="Please enter an email address" />
+      <button class="newbutton">Subcribe</button>
+    </div>
+
+    <div class="playstore">
+        <div class="applestore">
+        </div>
+        <div class="play">
+          </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <div id="box">
+    <div>
+  
+      <ul type="none">
+        <li><p class="lasthead">Women</p></li>
+       <a id="greylink"href=" "><li>Tops</li></a>
+       <a id="greylink" href=" "><li>Bottoms</li></a>
+       <a id="greylink"href=" "><li>Dresses & Jumpsuits</li></a>
+       <a id="greylink" href=" "><li>Sportswear</li></a>
+       <a id="greylink" href=" "><li>Winterwear</li></a>
+       <a id="greylink" href=" "><li>Ethnic Wear</li></a>
+       <a id="greylink" href=" "><li>Lingerie</li></a>
+       <a id="greylink" href=" "><li>Sleepwear</li></a>
+       <a id="greylink" href=" "><li>Accessories</li></a>
+       <a id="greylink" href=" "><li>Shoes</li></a>
+     </ul>
+    </div>
+    <div>
+      <ul type="none">
+        <li><p class="lasthead">Men</p></li>
+      <a id="greylink" href=""><li>Tops</li></a>
+      <a id="greylink" href=" "><li>Bottoms</li></a>
+      <a id="greylink" href=" "><li>Sportswear</li></a>
+      <a id="greylink" href=" "><li>Winterwear</li></a>
+      <a id="greylink" href=" "><li>Accessories</li></a>
+      <a id="greylink" href=" "><li>Shoes</li></a>
+    </ul>
+    </div>
+    <div>
+      <ul type="none">
+        <li><p class="lasthead">Boys</p></li>
+      <a id="greylink" href=" "><li>Tops</li></a>
+      <a id="greylink" href=" "><li>Bottoms</li></a>
+      <a id="greylink" href=" "><li>Indian Wear</li></a>
+      <a id="greylink" href=" "><li>Winterwear</li></a>
+      <a id="greylink" href=" "><li>Essentials</li></a>
+      <a id="greylink" href=" "><li>Accessories</li></a>
+      <a id="greylink" href=" "><li>Shoes</li></a>
+    </ul>
+    </div>
+    <div>
+      <ul type="none">
+        <li><p class="lasthead">Girls</p></li>
+      <a id="greylink" href=" "><li>Tops</li></a>
+      <a id="greylink" href=" "><li>Bottoms</li></a>
+      <a id="greylink" href=" "><li>Indian Wear</li></a>
+      <a id="greylink" href=" "><li>Winterwear</li></a>
+      <a id="greylink" href=" "><li>Essentials</li></a>
+      <a id="greylink" href=" "><li>Accessories</li></a>
+      <a id="greylink" href=" "><li>Shoes</li></a>
+    </ul>
+
+    </div>
+    <div>
+      <ul type="none">
+        <li><p class="lasthead">Explore</p></li>
+      <a id="greylink" href=" "><li>Offers</li></a>
+      <a id="greylink" href=" "><li>Magazine</li></a>
+      </ul>
+    </div>
+    <div>
+      <ul type="none">
+        <li><p class="lasthead">About</p></li>
+      <a id="greylink" href=" "><li>About us</li></a>
+      <a id="greylink" href=" "><li>Write to us</li></a>
+      <a id="greylink" href=" "><li>Careers</li></a>
+      <a id="greylink" href=""><li>Take a tour</li></a>
+      <a id="greylink" href=" "><li>Blog</li></a>
+      <a id="greylink" href=" "><li>Store Locator</li></a>
+      <a id="greylink" href=" "><li>Landmark Cares</li></a>
+    </ul>
+    </div>
+    <div>
+      <ul type="none">
+          <li><p class="lasthead">Help</p></li>
+          <a id="greylink"href=""><li>Contact us</li></a>
+          <a id="greylink" href=" "><li>Shipping</li></a>
+          <a id="greylink" href=" "><li>Return Process</li></a>
+          <a id="greylink" href=" "><li>Return Policy</li></a>
+          <a id="greylink"href=" "><li>Help Centre</li></a>
+      </ul>
+    </div>
+    
+  </div>
+
+  <div id="lastbox">
+         <div class="contact">
+          
+           <div class="one">
+          
+            <p class="sub">Talk to us</p>
+            <p class="head2">1800-123-1444
+           </div>
+           <div class="one">
+
+            <p class="sub">Helpcenter</p>
+            <p class="head2">help.maxfashion.com</p>
+
+           </div>
+
+           <div class="one"><p class="sub">Write to us</p>
+            <p class="head2">help.in@maxfashion.com
+              </p>
+            </div>
+           <div class="one">
+            <i class="fab fa-facebook-f facebook"></i>
+            <i class="fab fa-twitter facebook"></i>
+            <i class="fab fa-instagram facebook"></i>
+            </div>
+
+         </div>
+    </div>
+    <div class="about">
+      <div class="one1">
+        <p class="sub">© 2021 Retail World Limited.</p>
+        <p class="sub">Terms & Conditions - Privacy Policy</p>
+    </div>
+<!------------------------------------------------------------>
+</body>
+  <script type="text/javascript" src="womenProductPage.js"></script>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://kit.fontawesome.com/36165df214.js" crossorigin="anonymous"></script>
+    <title>FAB BAG Homepage</title>
+    <style>
+      .booknow {
+        
+        /* border: 1px solid red; */
+        height: 500px;
+        width: 100%;
+      }
+      #img1 {
+        background-repeat: no-repeat;
+        background-size: 100% 500px;
+        height: 500px;
+        width: 100%;
+      }
+      .whatsInBag {
+        /* border: 1px solid blue; */
+        width: 100%;
+        height: 610px;
+      }
+      .whatsTitle {
+        /* border: 1px solid red; */
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        font-size: 40px;
+        text-decoration: underline rgb(229, 185, 95);
+        padding-bottom: 10px;
+      }
+      .imgdiv {
+         display: grid;
+         grid-template-columns: auto auto auto auto;
+        gap: 40px; 
+        /* border: 1px solid green; */
+        height: 420px;
+      
+      }
+      .actualimg{
+          /* border: 1px solid red; */
+          border-radius: 30px;
+      }
+      #whatsimg{
+          height:400px;
+          width:100%;
+          border-radius: 30px;
+          
+      }
+      .imgDescription{
+          text-align: center;
+          color: rgb(29, 29, 29);
+      }
+      .subcription{
+        /* border: 1px solid rgb(245, 15, 195); */
+        width: 100%;
+        height: 700px;
+      }
+      .subName{
+        /* border: 1px solid red; */
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        font-size: 40px;
+        text-decoration: underline rgb(229, 185, 95);
+        padding-bottom: 10px;
+      }
+      .table{
+        display: grid;
+         grid-template-columns: auto auto auto;
+        gap: 40px; 
+        /* border: 1px solid green; */
+        height: 500px;
+        width: 70%;
+        margin: auto;
+      }
+      
+      .first{
+          width:100%;
+          height:90px;
+          text-align: center;
+          border: 3px solid rgb(194, 190, 190);
+          padding-top: 30px;
+          font-size: 20px;
+      }
+      .third{
+        width:100%;
+          height:130px ;
+          text-align: center;
+          border: 3px solid rgb(194, 190, 190);
+          padding-top: 30px;
+          font-size: 20px;
+
+      }
+      .forthbutton{
+        width:100%;
+          height:80px;
+          text-align: center;
+          background-color:rgb(229, 185, 95) ;
+          color:antiquewhite;
+          border:none;
+          font-size: 20px;
+      }
+      .preBag{
+        /* border: 1px solid rgb(51, 6, 155); */
+        width: 100%;
+        height: 500px;
+      }
+      .preBagName{
+        /* border: 1px solid red; */
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        font-size: 40px;
+        text-decoration: underline rgb(229, 185, 95);
+        padding-bottom: 10px;
+      }
+      .preImg{
+        display: grid;
+         grid-template-columns: auto auto auto auto;
+        gap: 40px; 
+        /* border: 1px solid green; */
+        height: 250px;
+        width: 75%;
+        margin: auto;
+
+      }
+      /* .preNewImg{
+        border: 2px solid rgb(15, 15, 15);
+      } */
+      #preBagsimg{
+          height:200px;
+          width:100%;
+          
+      }
+      .testinomials{
+        /* border: 1px solid rgb(240, 93, 8); */
+        width: 100%;
+        height: 500px;
+        background-color: rgb(245,229,198);
+        margin-bottom: 50px;
+      }
+      .testinomialsName{
+        /* border: 1px solid red; */
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        font-size: 40px;
+        text-decoration: underline rgb(229, 185, 95);
+        padding-bottom: 10px;
+      }
+      .testQuotes{
+        /* border: 1px solid rgb(27, 26, 26); */
+        text-align: center;
+        width: 70%;
+        height: 200px;
+        margin: auto;
+        padding-top: 50px;
+        font-size:21px;
+      }
+      .footerimg{
+          /* border: 1px solid green; */
+        width: 100%;
+        height: 200px;
+        margin-bottom: 50px;    
+      }
+      #box {
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        height: 250px;
+        width: 90%;
+        margin: auto;
+        margin-left: 10%;
+        margin-top: 80px;
+        grid-column-gap:80px ;
+        
+      }
+      .lasthead1{
+        font-size: 20px;
+       
+        color:black;
+    
+      }
+      #greylink{
+        color: #928477;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 30px;
+    
+      }
+      input[type="email"] {
+        width: 300px;
+        height: 40px;
+        background-color: rgb(245, 243, 243);
+        margin-top: 5px;
+        border: none;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .emailsub {
+        height: 150x;
+        width: 800px;
+        margin-top: 15px;
+       
+      }
+      .newbutton {
+        background-color: rgb(229, 185, 95);
+        border-radius: 1px;
+        border: 0px;
+        height: 40px;
+        width: 150px;
+        color: whitesmoke;
+        margin: auto;
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+        border-radius: 10px;
+      }
+      .one{
+          
+          height:120px;
+           width:100%;
+        text-align: center;
+        padding-top: 80px;
+        font-size:50px;
+        /* color:grey; */
+          /* padding-left: 115px; */
+
+        }
+        .one1{
+          height:120px;
+          vertical-align: top;
+          text-align: center;
+          
+        }
+        .sub {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+        color: rgb(160, 159, 159);
+        text-align: center;
+      }
+      .upperblack{
+        height:40px;
+        text-align: center;
+        width:100%;
+        background-color: rgb(22, 21, 21);
+        color:aliceblue;
+        padding-top: 15px;
+        font-size:20px
+      }
+      .subscribeLOGOBar{
+        height:100px;
+        width:100%;
+        /* border: 1px solid blue; */
+        display:grid;
+        grid-template-columns: 25% 60% 15%;
+      
+      }
+      .subcribe{
+        /* border: 1px solid red; */
+        height:100px;
+        font-size:30px;
+        text-align: center;
+       text-decoration: none;
+       background-color: white;
+       color:rgb(229, 185, 95);
+       font-weight: bold;
+       border: none;
+      
+      
+      }
+    
+      .fabbagLOGO{
+        /* border: 1px solid red; */
+          height:100px;
+          margin: auto;
+      }
+      .searchbar{
+        /* border: 1px solid red; */
+        height:100px;
+        display: grid;
+        grid-template-columns:auto auto auto auto;
+        font-size:28px;
+        color: rgb(229, 185, 95);
+        margin-top: 10px;
+
+      }
+
+     
+    </style>
+  </head>
+  <body>
+    <div class="upperblack">AVAILABLE NOW - THE BEAUTY RESOLUTION JANUARY FAB BAG! </div>
+    <div class="subscribeLOGOBar">
+      <button class="subcribe" >   SUBSCRIBE NOW    </button>
+      <div class="fabbagLOGO">
+        <a href="homepage.html"
+        ><img
+          style="
+            width: 250px;
+            height: 50px;
+            
+            margin-top: 15px;
+          "
+          src="https://cdn.shopify.com/s/files/1/0052/7551/6995/files/FABBAG-LOGO-FINAL.png?10137"
+          alt=""
+      /></a>
+      </div>
+      <div class="searchbar">
+        <i id="searchSymbol" class="fas fa-search"></i>
+        
+        <a href="cart.html"><i id="favSymbol" class="far fa-heart"></i>  </a>
+       <div id="accountSymbol"><i  class="far fa-user-circle"></i></div> 
+        <a href="cart.html"> <i class="fas fa-shopping-cart"></i>  </a>
+      </div>
+    </div>
+    <div class="booknow">
+      <a href="product.html"
+        ><img
+          id="img1"
+          src="https://cdn.shopify.com/s/files/1/0052/7551/6995/products/0WPB--SKINCARE-REVEAL-02.gif?v=1575872421"
+        />
+      </a>
+    </div>
+    <div class="whatsInBag">
+      <p class="whatsTitle">WHAT'S IN THE BAG</p>
+      <div class="imgdiv">
+          <div id="actualimg1" class=actualimg>
+            <a href="product.html"
+            ><img
+              id="whatsimg"
+              src="https://cdn.shopify.com/s/files/1/0052/7551/6995/files/What_s-In-The-Bag--Makeup-Reval-1_f2363b26-d6b5-4e83-83fb-29a83f84f5e0_2048x.png?v=1641199973"
+            />
+          </a>
+          <p class=imgDescription>SUGAR WONDER WOMEN 24 HR <br> LIP LACQUER OF YOUR CHOICE !*</p>
+          </div>
+
+          <div id="actualimg1" class=actualimg>
+            <a href="product.html"
+            ><img
+              id="whatsimg"
+              src="https://cdn.shopify.com/s/files/1/0052/7551/6995/files/What_s-In-The-Bag--Makeup-Reval-1_f2363b26-d6b5-4e83-83fb-29a83f84f5e0_2048x.png?v=1641199973"
+            />
+          </a>
+          <p class=imgDescription>COCO SOUL HAIR AND SCALP <br> CLEANER/SHAMPOO</p>
+          </div>
+
+          <div id="actualimg1" class=actualimg>
+            <a href="product.html"
+            ><img
+              id="whatsimg"
+              src="https://cdn.shopify.com/s/files/1/0052/7551/6995/files/What_s-In-The-Bag--Skincare-Reveal-2_2422e34b-29b9-4768-83a8-e8e6099efc9e_2048x.png?v=1641542044"
+            />
+          </a>
+          <p class=imgDescription>PALMERS HAIR STYLE HOLD</p>
+          </div>
+
+          <div id="actualimg1" class=actualimg>
+            <a href="product.html"
+            ><img
+              id="whatsimg"
+              src="https://cdn.shopify.com/s/files/1/0052/7551/6995/files/What_s-In-The-Bag--Skincare-Reveal-2_2422e34b-29b9-4768-83a8-e8e6099efc9e_2048x.png?v=1641542044"
+            />
+          </a>
+          <p class=imgDescription>BAISER INDIA NOURSHING LIP OIL</p>
+          </div>
+      </div*>
+    </div>
+    <div class="subcription">
+        <p class="subName">SUBCRIPTION</p>
+        <div class="table">
+            <div class="monthly">
+                <div class="first">1 MONTH <br>
+                    SUBSCRIPTION</div>
+                <div class="first">Rs. 599.00 <br>
+                    / per month</div>
+                <div class="third">
+                    ONE TIME PAYMENT<br>Rs. 599.00
+                </div>
+                <button id="cartbutton1" class="forthbutton">ADD TO CART</button>
+            </div>
+            <div class="monthly"> 
+                 <div class="first">1 MONTH <br>
+                SUBSCRIPTION</div>
+            <div class="first">Rs. 599.00 <br>
+                / per month</div>
+            <div class="third">
+                ONE TIME PAYMENT<br>Rs. 599.00
+            </div>
+            <button id="cartbutton2" class="forthbutton">ADD TO CART</button></div>
+            <div class="monthly">  <div class="first">1 MONTH <br>
+                SUBSCRIPTION</div>
+            <div class="first">Rs. 599.00 <br>
+                / per month</div>
+            <div class="third">
+                ONE TIME PAYMENT<br>Rs. 599.00
+            </div>
+            <button id="cartbutton3" class="forthbutton" >ADD TO CART</button>
+        </div>
+        
+    </div>
+    </div>
+
+    <div class="preBag">
+        <p class="preBagName">PREVIOUS BAGS</p>
+        <div class="preImg">
+            <div class="preNewImg">
+                <a href="product.html"
+                ><img
+                  id="preBagsimg"
+                  src="https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPage-3.gif?v=1638191014"
+                />
+              </a>
+              <p class=imgDescription>Dec'21 The X-Must Haves Fab Bag</p>
+            </div>
+            <div  class="preNewImg">
+                <a href="product.html"
+                ><img
+                  id="preBagsimg"
+                  src="https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPageBanner--Skincare-Reveal-4_1.gif?v=1636696484"
+                />
+              </a>
+              <p class=imgDescription>Nov'21 The Diva-Li-Cious Fab Bag</p>
+            </div>
+            <div class="preNewImg">
+                <a href="product.html"
+                ><img
+                  id="preBagsimg"
+                  src="https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPageBanner--Skincare-Reveal-4.png?v=1633952538"
+                />
+              </a>
+              <p class=imgDescription>Oct'21 The Re-Treat Fab Bag</p>
+            </div>
+            <div class="preNewImg">
+                <a href="product.html"
+                ><img
+                  id="preBagsimg"
+                  src="https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPageBanner-Skincare-Reveal-4-5_2faddde5-aa4f-4393-a694-5596034b6fed.png?v=1631337975"
+                />
+              </a>
+              <p class=imgDescription>Sep'21 The She-9-Igans Fab Bag</p>
+            </div>
+        </div>
+    </div>
+    <div class="testinomials">
+     <p class="testinomialsName">TESTIMONIALS</p>
+     <DIV class="testQuotes">I am highly impressed with the idea of surprising the customers by leaving them to guess, whats inside the Bag. Surprises brings excitement and I am always excited to receive my Fab Bag. First of all I should say that the Bags are awesome and each time I got my Fab Bag, I was really happy to find whats inside it. Really satisfied! :)</DIV>
+    </div>
+    <div class="footerimg">
+      <img class="footerimg" src="https://media-exp1.licdn.com/dms/image/C4D1BAQFfDny1srqG4g/company-background_10000/0/1633075345807?e=2159024400&v=beta&t=XyDqoaBa6O_3aKZ4k-uJ9wBhaYRHKREw79bug-WZYvk">
+    </div>
+ 
+    
+    <div id="box">
+        <div>
+      
+          <ul type="none">
+            <li><p class="lasthead1">INFORMATION</p></li>
+           <a id="greylink"href=" "><li>About Us</li></a>
+           <a id="greylink" href=" "><li>Associated Brands</li></a>
+           <a id="greylink"href=" "><li>FAQ</li></a>
+           <a id="greylink" href=" "><li>Collaborate with Fag Bag</li></a>
+           <a id="greylink" href=" "><li>Contact Us</li></a>
+           <a id="greylink" href=" "><li>Return & Refunds</li></a>
+           <a id="greylink" href=" "><li>Terms & Conditions</li></a>
+           <a id="greylink" href=" "><li>Privacy Policy</li></a>
+         </ul>
+        </div>
+        <div>
+          <ul type="none">
+            <li><p class="lasthead1">CUSTOMER CARE
+            </p></li>
+          <a id="greylink" href=""><li>Call : 022-6805-6010 
+            (Monday to Friday : 9 AM - 7 PM).</li></a>
+          <a id="greylink" href=" "><li>Mail : crew@fabbag.com</li></a>
+          
+          
+        </ul>
+        </div>
+        <div>
+          <ul type="none">
+            <li><p class="lasthead1">NEWSLETTER</p></li>
+          <a id="greylink" href=" "><li>Signup for the latest offers, updates and news</li></a>
+         <li> <div class="emailsub">
+            <input type="email" placeholder="Please enter an email address" />
+            <button class="newbutton">SUBSCRIBE</button>
+          </div>
+          </li>
+         
+        </ul>
+        </div>
+        
+        
+      </div>
+
+      <div class="one">
+        <i class="fab fa-facebook-f facebook"></i>
+        <i class="fab fa-twitter facebook"></i>
+        <i class="fab fa-instagram facebook"></i>
+        </div>
+
+        <div class="one1">
+            <p class="sub">Copyright © 2021 fabbag.com All rights reserved.</p>
+            
+            </div>
+
+  </body>
+</html>
+<script>
+    document.getElementById("cartbutton1").addEventListener("click", cartfunction)
+    document.getElementById("cartbutton2").addEventListener("click", cartfunction)
+    document.getElementById("cartbutton3").addEventListener("click", cartfunction)
+
+    
+    function cartfunction(){
+        window.location.href = "cart.html";
+    }
+
+    var data = [
+      {
+        image1:
+          "https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPage-3.gif?v=1638191014",
+
+        price: "Rs.599.00",
+        Description:
+          "The Beauty Sleigh-ers are back! Treat yourself this holiday season with 6+ hot-selling beauty essentials inside the X-Must Haves...",
+        name: "Dec'21 The X-Must Haves Fab Bag",
+      },
+
+      {
+        image1:
+          "https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPageBanner--Skincare-Reveal-4_1.gif?v=1636696484",
+
+        price: "Rs.899.00",
+        Description:
+          "Unleash your inner diva with the Diva-li-cious November Fab Bag! Snag 2 makeup...",
+        name: "Nov'21 The Diva-Li-Cious Fab Bag",
+      },
+
+      {
+        image1:
+          "https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPageBanner-Skincare-Reveal-4-5_2faddde5-aa4f-4393-a694-5596034b6fed.png?v=1631337975",
+
+        price: "Rs.599.00",
+        Description:
+          "Stock up on all your ultimate faves with the Re-Treat October Fab Bag...",
+        name: "Oct'21 The Re-Treat Fab Bag",
+      },
+
+      {
+        image1:
+          "https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPageBanner-Skincare-Reveal-4-5_2faddde5-aa4f-4393-a694-5596034b6fed.png?v=1631337975",
+
+        price: "Rs.599.00",
+        Description:
+          "3...2…1… We're on cloud 9! Unleash your inner diva with 6 alluring essentials...",
+        name: "Sep'21 The She-9-Igans Fab Bag",
+      },
+
+      {
+        image1:
+          "https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPage-Skincare-Reveal--3.png?v=1641707966",
+
+        price: "Rs.599.00",
+        Description:
+          "New Year calls for All New Beauty! Discover 4 makeup & skincare essentials this month from your favorite brands...",
+        name: "The Beauty Resolution January Fab Bag",
+      },
+    ];
+
+    var mProducts = JSON.parse(localStorage.getItem("menProdData"));
+    localStorage.setItem("menProdData", JSON.stringify(data));
+    display(mProducts);
+    function display(mProducts) {
+      // document.querySelector("#menProd").innerHTML = "";
+      var menProducts = document.getElementById("menProd");
+      var i = 0;
+      mProducts.map(function (el) {
+        var div = document.createElement("div");
+        div.setAttribute("class", `prodSubdiv`);
+
+        div.addEventListener("mouseover", function () {
+          a1.style.display = "block";
+          a2.style.display = "block";
+          div3.style.display = "grid";
+        });
+        div.addEventListener("mouseleave", function () {
+          a1.style.display = "none";
+          a2.style.display = "none";
+          div3.style.display = "none";
+        });
+
+    var productPreview = [];
+        document.getElementById("preBagsimg").addEventListener("click", function () {
+          productPreview.push(el);
+          localStorage.setItem("productPreview", JSON.stringify(el));
+          window.location.href = "product.html";
+        });
+        document.getElementById("whatsimg").addEventListener("click", function () {
+          productPreview.push(el);
+          localStorage.setItem("productPreview", JSON.stringify(el));
+          window.location.href = "product.html";
+        });
+        document.getElementById("img1").addEventListener("click", function () {
+          productPreview.push(el);
+          localStorage.setItem("productPreview", JSON.stringify(el));
+          window.location.href = "product.html";
+        });
+        var img1 = document.createElement("img");
+        img1.setAttribute("class", `prodImg imghover${i} `);
+        img1.setAttribute("src", el.image1);
+        i++;
+
+        console.log(productPreview);
+      });
+    }
+    document.getElementById("accountSymbol").addEventListener("click", accountqClick)
+    function accountqClick(){
+  
+window.location.href = "SignIn.html";
+    }
+    </script>

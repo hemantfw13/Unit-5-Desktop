@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account - FAB BAG</title>
+    <script
+      src="https://kit.fontawesome.com/1e9a702aec.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #mainDiv {
+        height: 500px;
+        width: 40%;
+        margin: auto;
+        padding: 10px;
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        border-radius: 5px;
+      }
+      #scndDiv {
+        height: 85%;
+        width: 70%;
+        margin: auto;
+        padding: 2%;
+      }
+      p {
+        text-align: center;
+        font-size: 45px;
+        font-family: sans-serif;
+        margin-bottom: 2px;
+      }
+
+      .greyTxt {
+        font-size: 18px;
+        color: grey;
+      }
+      .myBtnDiv {
+        margin-top: 5%;
+        height: 10%;
+      }
+      .myBtn {
+        width: 84%;
+        height: 100%;
+        background-color: #36559c;
+        font-size: 16px;
+        color: whitesmoke;
+        margin-left: 5%;
+        border-radius: 5px;
+        border: none;
+        text-align: left;
+        padding-left: 20px;
+      }
+      .myBtn1 {
+        width: 84%;
+        height: 100%;
+        background-color: #db231d;
+        font-size: 16px;
+        color: whitesmoke;
+        margin-left: 5%;
+        margin-top: 2%;
+        border-radius: 5px;
+        border: none;
+        text-align: left;
+        padding-left: 20px;
+      }
+      .myBtn2 {
+        width: 84%;
+        height: 100%;
+        background-color: rgb(229, 185, 95);
+        font-size: 16px;
+        color: rgb(20, 19, 19);
+        margin-left: 5%;
+        margin-top: 2%;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        padding-left: 20px;
+      }
+      .myBtn3 {
+        width: 84%;
+        height: 100%;
+        background-color: rgb(229, 185, 95);
+        font-size: 16px;
+        color: rgb(20, 19, 19);
+        margin-left: 5%;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        padding-left: 20px;
+      }
+      #viaMail {
+        display: inline-block;
+        width: 100%;
+        align-content: center;
+        text-align: center;
+      }
+      #firstHr {
+        display: inline-block;
+        width: 30%;
+      }
+      #viaMailID {
+        display: inline-block;
+        width: 25%;
+      }
+      #secondHr {
+        display: inline-block;
+        width: 30%;
+      }
+
+      #input {
+        height: 12%;
+        padding: 2%;
+        margin-left: 2.5%;
+        padding-right: 0%;
+        margin-top: 10%;
+      }
+      .inputTxt {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: left;
+        color: gray;
+      }
+      .inputBox {
+        width: 86%;
+        height: 65%;
+        margin-top: 1%;
+        font-size: 26px;
+        border-radius: 2px;
+        border: 1px solid rgb(184, 180, 180);
+      }
+      .inputBox:focus {
+        outline: none;
+        border-color: #303ab2;
+      }
+      #scndLast {
+        height: 10%;
+        width: 90%;
+
+        padding: 5%;
+        margin-left: 2.5%;
+        padding-right: 0%;
+        margin-top: 12%;
+        display: inline-block;
+      }
+      #loginTxt {
+        font-size: 16px;
+        display: inline-block;
+        padding-bottom: 5%;
+        color: red;
+      }
+      #checkBox {
+        height: 20px;
+        width: 20px;
+        border-radius: 5px;
+        margin-top: 10%;
+      }
+      .resetPass {
+        margin-top: 40px;
+        font-size: 16px;
+        margin-left: 70px;
+        display: inline-block;
+        text-align: right;
+      }
+      .or {
+        text-align: center;
+        font-size: 16px;
+        margin-top: 40px;
+      }
+      #firstTxt {
+        font-size: 35px;
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainDiv">
+      <div id="scndDiv">
+        <div>
+          <p id="firstTxt">Sign In</p>
+        </div>
+
+        <div class="myBtnDiv">
+          <button class="myBtn">
+            <i class="fab fa-facebook-square"></i> Sign in with Facebook
+          </button>
+          <button class="myBtn1">
+            <i class="fab fa-facebook-square1"></i> Sign in with Google
+          </button>
+        </div>
+
+        <div id="input">
+          <p class="inputTxt">Email Address</p>
+          <input type="text" id="emailAddr" class="inputBox" />
+          <p class="inputTxt">Password</p>
+          <input type="password" id="passWord" class="inputBox" />
+        </div>
+
+        <div id="scndLast">
+          <!-- <input type="checkbox" name="" id="checkBox" /> -->
+          <p id="loginTxt">&nbsp;* Required Fields</p>
+          <p class="resetPass">
+            <a href="resetpwd.html" style="color: black; text-decoration: none">
+              Forgot your password?
+            </a>
+          </p>
+        </div>
+
+        <div class="myBtnDiv">
+          <button class="myBtn2" id="logIn">Sign In</button>
+        </div>
+        <p class="or">Or</p>
+        <div class="myBtnDiv">
+          <button class="myBtn3" id="signup">Create an Account</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.getElementById("logIn").addEventListener("click", signIn);
+  var regdUser = JSON.parse(localStorage.getItem("userData"));
+  function signIn() {
+    var email = document.querySelector("#emailAddr").value;
+    var pass = document.querySelector("#passWord").value;
+
+    if (email == "admin" && pass == "admin") {
+      window.location.href = "admin.html";
+      alert("Welcome admin!");
+    } else if (email == "123" && pass == "123") {
+      window.location.href = "homepage.html";
+      alert("login succesful");
+    } else {
+      for (var i = 0; i < regdUser.length; i++) {
+        if (regdUser[i].youremail == email && regdUser[i].yourpass == pass) {
+          window.location.href = "homepage.html";
+          alert("login succesful");
+        }
+        // else {
+        //   alert("Check you email & password");
+        // }
+      }
+    }
+  }
+  document.getElementById("signup").addEventListener("click", SignUp);
+  function SignUp() {
+    window.location.href = "Signup.html";
+  }
+</script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    form {
+      display: grid;
+      grid-gap: 10px;
+      width: 60px;
+      margin: auto;
+      height: 40px;
+    }
+    form > input:last-child {
+      background-color: brown;
+    }
+    h1 {
+      color: red;
+    }
+  </style>
+  <body>
+    <form id="form" action="">
+      <h1>Admin Page</h1>
+      <input id="image1" type="text" placeholder="image1_url" />
+
+      <input id="image2" type="text" placeholder="image2_url" />
+
+      <input id="image3" type="text" placeholder="image3_url" />
+
+      <input id="price" type="number" placeholder="enter price" />
+
+      <input id="name" type="text" placeholder="enter name" />
+      <input id="color" type="text" placeholder="enter color" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+<script>
+  document.querySelector("form").addEventListener("submit", addItem);
+  var product = JSON.parse(localStorage.getItem("menProdData"));
+  function addItem(e) {
+    e.preventDefault();
+    console.log("here");
+    var productobj = {
+      image1: form.image1.value,
+      image2: form.image2.value,
+      image3: form.image3.value,
+      price: form.price.value,
+      name: form.name.value,
+      color: form.color.value,
+    };
+    product.push(productobj);
+    localStorage.setItem("menProdData", JSON.stringify(product));
+    window.alert("Product added");
+  }
+</script>

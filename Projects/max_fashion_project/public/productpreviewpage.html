@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/36165df214.js" crossorigin="anonymous"></script>
+
+    <title>Online Shopping at Max</title>
+  </head>
+  <style>
+    #container {
+      display: flex;
+      gap: 35px;
+      /* border: 1px solid grey; */
+      height: 1600px;
+    }
+    #ldiv {
+      width: 65%;
+      height: 1600px;
+      /* border: 1px solid blue; */
+      /* display: flex; */
+    }
+    #rdiv {
+      padding-top: 30px;
+      /* border: 1px solid red; */
+      width: 32%;
+      height: 1570px;
+    }
+
+    span {
+      color: grey;
+      font-size: 15px;
+    }
+    #img1 {
+      width: 500px;
+      height: 700px;
+      margin-top: 30px;
+    }
+    #img2 {
+      width: 500px;
+      height: 700px;
+      margin-top: 30px;
+      margin-left: 10px;
+    }
+    #img3 {
+      width: 500px;
+      height: 700px;
+      margin-top: 10px;
+    }
+
+    h4 {
+      color: black;
+      width: 500px;
+      margin-top: 5%;
+    }
+     h5{
+      color: black;
+      font-size:15px
+     }
+    #extrabox {
+      /* border: 1px solid teal; */
+      width: 100%;
+      height: 10%;
+    }
+    #sizebox {
+      /* border: 1px solid teal; */
+      width: 100%;
+      height: 5%;
+      /* margin-top: 20px; */
+      display: grid;
+      grid-template-columns: 50px 50px 50px 50px 50px;
+      grid-template-rows: 60px 60px;
+      grid-gap: 40px;
+    }
+    #sizebox > button {
+      font-size: 15px;
+      font-weight: bold;
+      background-color: white;
+      border: 2px solid grey;
+
+      height: 90%;
+      width: 140%;
+    }
+    sizename {
+      margin-top: 20px;
+      font-size: 20px;
+      color: black;
+    }
+    #sizenameguide {
+      height: 2.5%;
+      width: 100%;
+      /* border: 1px solid blue; */
+      margin-top: 10px;
+    }
+    
+    #sizeguide {
+      margin-top: 10px;
+      font-size: 20px;
+      color: black;
+      margin-left: 60%;
+      text-decoration: underline;
+    }
+    #selectsize {
+      height: 65%;
+      width: 13%;
+      /* border: 1px solid grey; */
+      color: black;
+      font-size: 15px;
+      font-weight: bold;
+      vertical-align: top;
+    }
+    option {
+      color: black;
+      text-align: center;
+      font-size: 15px;
+    }
+    #buttonlast {
+      font-size: 15px;
+      font-weight: bold;
+      background-color: rgb(65, 65, 228);
+      color: white;
+      height: 60px;
+      width: 300px;
+      margin-left: 20px;
+      border: 0;
+      border-radius: 2px;
+    }
+    #basketbox {
+      width: 100%;
+      height: 6%;
+      /* border: 1px solid green; */
+    }
+    #smallimagebox {
+      width: 100px;
+      height: 90px;
+      /* border: 1px solid red; */
+    }
+    #favourite {
+      
+      font-size: 18px;
+      
+      text-decoration: none;
+      
+      margin-left: 10px;
+      color: black;
+
+    
+    }
+    #promotionbox {
+      /* border: 1px solid green; */
+      width: 100%;
+      height: 25%;
+    }
+    #promotionoffer {
+      /* border: 1px solid teal; */
+      width: 100%;
+      height: 15%;
+      margin-top: 2%;
+    }
+    #offername {
+      color: tomato;
+      background-color: rgb(245, 230, 230);
+      margin-top: 7%;
+      width: 30%;
+      height: 5%;
+      font-size: 13px;
+      margin-left: 20px;
+      padding: 1%;
+    }
+    #clickcollect1 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 15%;
+      margin-top: 5%;
+    }
+    #clickcollect {
+      font-size: 15px;
+      margin-top: 2%;
+      margin-left: 15%;
+    }
+
+    #Payininstallments1 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 15%;
+      margin-top: 2%;
+    }
+    #Payininstallments {
+      font-size: 15px;
+      margin-top: 2%;
+      margin-left: 15%;
+    }
+    #myorder {
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 15%;
+      margin-top: 2%;
+    }
+    #pincodeInput {
+      font-size: 15px;
+      margin-left: 15%;
+      margin-top: 2%;
+      height: 10%;
+      width: 50%;
+    }
+    #checkbutton {
+      background-color: rgb(65, 65, 228);
+      color: white;
+      width: 15%;
+      height: 12%;
+      margin-left: 10px;
+      border: 0;
+      border-radius: 2px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    #overview {
+      width: 100%;
+      height: 33%;
+      /* border: 1px solid blue; */
+      margin-top: 5%;
+    }
+    #overview1 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 2%;
+      margin-top: 2%;
+    }
+    #overviewname {
+      font-size: 15px;
+      margin-left: 2%;
+      margin-top: 2%;
+    }
+    .overviewoder {
+      font-size: 16px;
+      margin-left: 5%;
+      margin-top: 2%;
+    }
+    .socialstickers {
+      width: 100%;
+      height: 5%;
+      /* border: 1px solid blue; */
+    }
+    .socialstickersname {
+      margin-top: 5%;
+      margin-left: 2%;
+    }
+    #belowbox {
+      width: 100%;
+      height: 400px;
+      /* border: 1px solid red; */
+    }
+    .greydiv {
+      /* border: 1px solid grey; */
+      height: 80%;
+      width: 100%;
+      margin-top: 3%;
+      background-color: #ecedeb;
+    }
+    .reviews {
+      color: black;
+      font-size: 50px;
+
+      margin-left: 100px;
+      margin-top: 80;
+    }
+    .whatdoyouthink {
+      color: black;
+      font-size: 25px;
+
+      margin-left: 450px;
+      display: inline-block;
+    }
+    #reviewbutton {
+      background-color: #ecedeb;
+      color: blue;
+      height: 16%;
+      width: 20%;
+      text-align: center;
+      margin-left: 900px;
+      border: 1px solid blue;
+      font-weight: bold;
+      display: inline-block;
+    }
+    #footer {
+      width: 100%;
+      height: 300px;
+      /* border: 1px solid blue; */
+    }
+    #box2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px 100px;
+        gap: 20px;
+     
+        height: 40%;
+        width: 1300px;
+        margin: auto;
+        margin-top: 30px;
+        /* border: 1px solid red; */
+      }
+      .head {
+        font-size: 25px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bolder;
+      }
+      .sub {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+        color: rgb(160, 159, 159);
+      }
+      .emailsub {
+        height: 200px;
+        width: 800px;
+        margin-top: 15px;
+      }
+      .newbutton {
+        background-color: black;
+        border-radius: 1px;
+        border: 0px;
+        height: 55px;
+        width: 220px;
+        color: whitesmoke;
+        margin: auto;
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .playstore {
+        height: 90x;
+        width: 450px;
+       
+        margin-top: 20px;
+      }
+      .applestore{
+      
+        height: 65px;
+        width: 200px;
+        background-image: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/en/app-store-badge-us-black.svg);
+        display:inline-block;
+        background-repeat: no-repeat;
+        background-size: 200px 65px;
+        vertical-align: top;
+        margin-top: 5px;
+
+      }
+      .play{
+        
+        height: 75px;
+        width: 200px;
+        background-image: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/en/google-play-badge-us.svg);
+        display:inline-block;
+        background-repeat: no-repeat;
+        background-size: 200px 75px;
+        vertical-align: top;
+
+      }
+      #box {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        height: 250px;
+        width: 1300px;
+        margin: auto;
+        margin-top: 60px;
+        
+      }
+      .lasthead{
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bolder;
+      }
+      #greylink{
+        color: #928477;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+      }
+      #lastbox{
+        margin-top: 300px;
+        display: grid;
+     
+        border-top:1px solid rgb(206, 206, 206);
+        border-bottom:1px solid rgb(206, 206, 206);
+        height: 250px;
+        width: 1350px;
+        margin-left: 250px;
+        
+      }
+        .contact{
+         
+          border:bottom;
+          height: 125px;
+        width: 1350px;
+        border-bottom:1px solid rgb(206, 206, 206);
+      
+        display:inline-block;
+
+        }
+        .one{
+          height:120px;
+          width:215px;
+       
+          display:inline-block;
+          vertical-align: top;
+          padding-left: 115px;
+
+        }
+        .head2 {
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+      }
+      .facebook{
+          font-size:35px;
+          color:black;
+          margin-top: 30px;
+          margin-right: 20px;
+        }
+        .search{
+          font-size:20px;
+          color:black;
+         
+          margin-left: 50px;
+          color:gray;
+          
+        }
+        .phone{
+          font-size:35px;
+          color:black;
+          margin-right: 10px;
+        
+        }
+        .about{
+        
+        height: 123px;
+      width: 1350px;
+      }
+      .one1{
+          height:120px;
+          width:300px;
+          
+          display:inline-block;
+          vertical-align: top;
+          padding-left: 300px;
+          
+
+        }
+        #emailid{
+        width:40%;
+        height: 25%;
+        margin-right: 1%;
+        border:0;
+        font-size:19px
+
+        }
+  </style>
+  <body>
+    <div id="container"></div>
+    <div id="belowbox"></div>
+    <div id="footer">
+      
+    <div id="box2">
+      <div>
+        <p class="head">Subscribe to our awesome emails.</p>
+        <p class="sub">
+          Get our latest offers and news straight in your inbox.
+        </p>
+      </div>
+
+      <div>
+        <p class="head">Download our apps</p>
+        <p class="sub">Shop our products and offers on the go.</p>
+      </div>
+      <div class="emailsub">
+        <input id ="emailid" type="email" placeholder="Please enter an email address" />
+        <button class="newbutton">Subcribe</button>
+      </div>
+
+      <div class="playstore">
+          <div class="applestore">
+          </div>
+          <div class="play">
+            </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <div id="box">
+      <div>
+    
+        <ul type="none">
+           <li><p class="lasthead">Women</p></li>
+          <a id="greylink"href=" "><li>Tops</li></a>
+          <a id="greylink" href=" "><li>Bottoms</li></a>
+          <a id="greylink"href=" "><li>Dresses & Jumpsuits</li></a>
+          <a id="greylink" href=" "><li>Sportswear</li></a>
+          <a id="greylink" href=" "><li>Winterwear</li></a>
+          <a id="greylink" href=" "><li>Ethnic Wear</li></a>
+          <a id="greylink" href=" "><li>Lingerie</li></a>
+          <a id="greylink" href=" "><li>Sleepwear</li></a>
+          <a id="greylink" href=" "><li>Accessories</li></a>
+          <a id="greylink" href=" "><li>Shoes</li></a>
+        </ul>
+      </div>
+      <div>
+        <ul type="none">
+            <li><p class="lasthead">Men</p></li>
+          <a id="greylink" href=""><li>Tops</li></a>
+          <a id="greylink" href=" "><li>Bottoms</li></a>
+          <a id="greylink" href=" "><li>Sportswear</li></a>
+          <a id="greylink" href=" "><li>Winterwear</li></a>
+          <a id="greylink" href=" "><li>Accessories</li></a>
+          <a id="greylink" href=" "><li>Shoes</li></a>
+        </ul>
+      </div>
+      <div>
+        <ul type="none">
+            <li><p class="lasthead">Boys</p></li>
+          <a id="greylink" href=" "><li>Tops</li></a>
+          <a id="greylink" href=" "><li>Bottoms</li></a>
+          <a id="greylink" href=" "><li>Indian Wear</li></a>
+          <a id="greylink" href=" "><li>Winterwear</li></a>
+          <a id="greylink" href=" "><li>Essentials</li></a>
+          <a id="greylink" href=" "><li>Accessories</li></a>
+          <a id="greylink" href=" "><li>Shoes</li></a>
+        </ul>
+      </div>
+      <div>
+        <ul type="none">
+            <li><p class="lasthead">Girls</p></li>
+          <a id="greylink" href=" "><li>Tops</li></a>
+          <a id="greylink" href=" "><li>Bottoms</li></a>
+          <a id="greylink" href=" "><li>Indian Wear</li></a>
+          <a id="greylink" href=" "><li>Winterwear</li></a>
+          <a id="greylink" href=" "><li>Essentials</li></a>
+          <a id="greylink" href=" "><li>Accessories</li></a>
+          <a id="greylink" href=" "><li>Shoes</li></a>
+        </ul>
+      </div>
+      <div>
+        <ul type="none">
+            <li><p class="lasthead">Explore</p></li>
+          <a id="greylink" href=" "><li>Offers</li></a>
+          <a id="greylink" href=" "><li>Magazine</li></a>
+        </ul>
+      </div>
+      <div>
+        <ul type="none">
+            <li><p class="lasthead">About</p></li>
+          <a id="greylink" href=" "><li>About us</li></a>
+          <a id="greylink" href=" "><li>Write to us</li></a>
+          <a id="greylink" href=" "><li>Careers</li></a>
+          <a id="greylink" href=""><li>Take a tour</li></a>
+          <a id="greylink" href=" "><li>Blog</li></a>
+          <a id="greylink" href=" "><li>Store Locator</li></a>
+          <a id="greylink" href=" "><li>Landmark Cares</li></a>
+        </ul>
+      </div>
+      <div>
+        <ul type="none">
+            <li><p class="lasthead">Help</p></li>
+          <a id="greylink"href=""><li>Contact us</li></a>
+          <a id="greylink" href=" "><li>Shipping</li></a>
+          <a id="greylink" href=" "><li>Return Process</li></a>
+          <a id="greylink" href=" "><li>Return Policy</li></a>
+          <a id="greylink"href=" "><li>Help Centre</li></a>
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="lastbox">
+           <div class="contact">
+            
+             <div class="one">
+            
+              <p class="sub">Talk to us</p>
+              <p class="head2">1800-123-1444
+             </div>
+             <div class="one">
+
+              <p class="sub">Helpcenter</p>
+              <p class="head2">help.maxfashion.com</p>
+
+             </div>
+
+             <div class="one"><p class="sub">Write to us</p>
+              <p class="head2">help.in@maxfashion.com
+                </p>
+              </div>
+             <div class="one">
+              <i class="fab fa-facebook-f facebook"></i>
+              <i class="fab fa-twitter facebook"></i>
+              <i class="fab fa-instagram facebook"></i>
+              </div>
+
+           </div>
+           <div class="about">
+
+
+                       <div class="one1">
+              <p class="sub">© 2021 Retail World Limited.</p>
+              <p class="sub">Terms & Conditions - Privacy Policy
+               
+                </p>
+              </div>
+           </div>
+  
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var product = JSON.parse(localStorage.getItem("productPreview"));
+  display(product);
+
+  function display(product) {
+    var nameh4 = document.createElement("h4");
+    nameh4.textContent = product.name;
+
+    var image1 = document.createElement("img");
+    image1.setAttribute("id", "img1");
+    image1.setAttribute("src", product.image1);
+    var image2 = document.createElement("img");
+    image2.setAttribute("id", "img2");
+    image2.setAttribute("src", product.image2);
+    var image3 = document.createElement("img");
+    image3.setAttribute("id", "img3");
+    image3.setAttribute("src", product.image3);
+    var body = document.querySelector("body");
+    var lefdiv = document.createElement("div");
+    lefdiv.setAttribute("id", "ldiv");
+    lefdiv.append(nameh4, image1, image2, image3);
+
+    var maindiv = document.getElementById("container");
+
+    maindiv.append(lefdiv);
+
+    var priceh1 = document.createElement("h1");
+    priceh1.setAttribute("id", "price");
+    priceh1.innerHTML = ` <sup> ₹ </sup>  ${product.price} <span>Inclusive of all taxes</span>`;
+
+    var freeshipinglink = document.createElement("a");
+    freeshipinglink.setAttribute("href", "");
+    freeshipinglink.textContent = "Free shipping on all orders";
+
+    var rightdiv = document.createElement("div");
+    rightdiv.setAttribute("id", "rdiv");
+
+    var extrabox = document.createElement("div");
+    extrabox.setAttribute("id", "extrabox");
+
+    var colorname = document.createElement("h5");
+    colorname.textContent = "Color : Multicolour";
+
+    var smallimagebox = document.createElement("img");
+    smallimagebox.setAttribute("id", "smallimagebox");
+    smallimagebox.setAttribute("src",product.image1);
+
+    var sizenameguide = document.createElement("div");
+    sizenameguide.setAttribute("id", "sizenameguide");
+
+    var sizebox = document.createElement("div");
+    sizebox.setAttribute("id", "sizebox");
+
+    var basketbox = document.createElement("div");
+    basketbox.setAttribute("id", "basketbox");
+
+    var sizename = document.createElement("sizename");
+    sizename.textContent = "Size :";
+
+    var sizeguide = document.createElement("a");
+    sizeguide.setAttribute("href", "");
+    sizeguide.setAttribute("id", "sizeguide");
+    sizeguide.textContent = "Size Guide";
+
+    var button1 = document.createElement("button");
+    button1.setAttribute("id", "button1");
+    button1.textContent = "S";
+    button1.addEventListener("click",mybutton1)
+    button1.addEventListener("dblclick",mybutton11)
+
+    function mybutton1(){
+      document.getElementById("button1").style.borderColor="blue";
+    }
+    function mybutton11(){
+      document.getElementById("button1").style.borderColor="grey";
+    }
+    
+    var button2 = document.createElement("button");
+    button2.setAttribute("id", "button2");
+    button2.textContent = "M";
+    button2.addEventListener("click",mybutton2)
+    button2.addEventListener("dblclick",mybutton22)
+
+    function mybutton2(){
+      document.getElementById("button2").style.borderColor="blue";
+    }
+    function mybutton22(){
+      document.getElementById("button2").style.borderColor="grey";
+    }
+ 
+
+
+    var button3 = document.createElement("button");
+    button3.setAttribute("id", "button3");
+    button3.textContent = "L";
+    button3.addEventListener("click",mybutton3)
+    button3.addEventListener("dblclick",mybutton33)
+
+    function mybutton3(){
+      document.getElementById("button3").style.borderColor="blue";
+    }
+    function mybutton33(){
+      document.getElementById("button3").style.borderColor="grey";
+    }
+
+    var button4 = document.createElement("button");
+    button4.setAttribute("id", "button4");
+    button4.textContent = "XL";
+    button4.addEventListener("click",mybutton4)
+    button4.addEventListener("dblclick",mybutton44)
+
+    function mybutton4(){
+      document.getElementById("button4").style.borderColor="blue";
+    }
+    function mybutton44(){
+      document.getElementById("button4").style.borderColor="grey";
+    }
+
+
+
+    var button5 = document.createElement("button");
+    button5.setAttribute("id", "button5");
+    button5.textContent = "XXL";
+    button5.addEventListener("click",mybutton5)
+    button5.addEventListener("dblclick",mybutton55)
+
+    function mybutton5(){
+      document.getElementById("button5").style.borderColor="blue";
+    }
+    function mybutton55(){
+      document.getElementById("button5").style.borderColor="grey";
+    }
+
+
+    var selectsize = document.createElement("select");
+    selectsize.setAttribute("id", "selectsize");
+
+    var option1 = document.createElement("option");
+    option1.textContent = "1";
+    var option2 = document.createElement("option");
+    option2.textContent = "2";
+    var option3 = document.createElement("option");
+    option3.textContent = "3";
+    var option4 = document.createElement("option");
+    option4.textContent = "4";
+    var option5 = document.createElement("option");
+    option5.textContent = "5";
+    var option6 = document.createElement("option");
+    option6.textContent = "6";
+    var option7 = document.createElement("option");
+    option7.textContent = "7";
+    var option8 = document.createElement("option");
+    option8.textContent = "8";
+    var option9 = document.createElement("option");
+    option9.textContent = "9";
+    var option10 = document.createElement("option");
+    option10.textContent = "10";
+
+    var buttonlast = document.createElement("button");
+    buttonlast.setAttribute("id", "buttonlast");
+    buttonlast.textContent = "ADD TO BASKET";
+
+    var favourite = document.createElement("a");
+    favourite.setAttribute("href","");
+    favourite.setAttribute("id", "favourite");
+    favourite.textContent = "♡ Add to favourites";
+
+    var promotionbox = document.createElement("div");
+    promotionbox.setAttribute("id", "promotionbox");
+
+    var promotionoffer = document.createElement("div");
+    promotionoffer.setAttribute("id", "promotionoffer");
+
+    var offername = document.createElement("div");
+    offername.setAttribute("id", "offername");
+    offername.textContent = "PROMOTION OFFER";
+
+    var belowoffer = document.createElement("div");
+    belowoffer.setAttribute("id", "belowoffer");
+    belowoffer.textContent =
+      "App Exclusive Offer- FLAT 500 Off on 2499 & above. Code- APP500 Browse promotion";
+
+    var clickcollect = document.createElement("div");
+    clickcollect.setAttribute("id", "clickcollect");
+    clickcollect.textContent =
+      "Order this product now and collect it from a store of your choice. Learn more";
+
+    var clickcollect1 = document.createElement("div");
+    clickcollect1.setAttribute("id", "clickcollect1");
+    clickcollect1.textContent = "Click & Collect";
+
+    var Payininstallments = document.createElement("div");
+    Payininstallments.setAttribute("id", "Payininstallments");
+    Payininstallments.textContent =
+      "Pay in easy installments on orders of ₹ 3,000 or more. Available for select banks. Learn more";
+
+    var Payininstallments1 = document.createElement("div");
+    Payininstallments1.setAttribute("id", "Payininstallments1");
+    Payininstallments1.textContent = "Pay in Installments";
+
+    var myorder = document.createElement("div");
+    myorder.setAttribute("id", "myorder");
+    myorder.textContent = "When will I receive my order?";
+
+    var pincodeInput = document.createElement("input");
+    pincodeInput.setAttribute("type", "text");
+    pincodeInput.setAttribute("placeholder", "Enter Your Pincode");
+    pincodeInput.setAttribute("id", "pincodeInput");
+
+    var checkbutton = document.createElement("button");
+    checkbutton.setAttribute("id", "checkbutton");
+    checkbutton.textContent = "Check";
+
+    var overview = document.createElement("div");
+    overview.setAttribute("id", "overview");
+
+    var overview1 = document.createElement("div");
+    overview1.setAttribute("id", "overview1");
+    overview1.textContent = "Overview";
+
+    var overviewname = document.createElement("div");
+    overviewname.setAttribute("id", "overviewname");
+    overviewname.textContent =
+      "With a culmination of colours, this sweater is designed to offer a blend of comfort and style for your everyday wear. It comes with full-sleeve construction and a ribbed hem.";
+
+    var overviewoder = document.createElement("div");
+    overviewoder.setAttribute("class", "overviewoder");
+    overviewoder.textContent = "• Type : Crew Neck";
+
+    var overviewoder1 = document.createElement("div");
+    overviewoder1.setAttribute("class", "overviewoder");
+    overviewoder1.textContent = "• Design : Colourblocked";
+
+    var overviewoder2 = document.createElement("div");
+    overviewoder2.setAttribute("class", "overviewoder");
+    overviewoder2.textContent = "• Neckline : Crew Neck";
+
+    var overviewoder3 = document.createElement("div");
+    overviewoder3.setAttribute("class", "overviewoder");
+    overviewoder3.textContent = "• Sleeve Length : Full Sleeves";
+
+    var overviewoder4 = document.createElement("div");
+    overviewoder4.setAttribute("class", "overviewoder");
+    overviewoder4.textContent = "• Fabric : Acrylic";
+
+    var overviewoder5 = document.createElement("div");
+    overviewoder5.setAttribute("class", "overviewoder");
+    overviewoder5.textContent = "• Care Instructions : Hand Wash Cold";
+
+    var overviewoder6 = document.createElement("div");
+    overviewoder6.setAttribute("class", "overviewoder");
+    overviewoder6.textContent =
+      "• Model Wears : Size M,has Height 6'0 and Chest 38";
+
+    var overviewoder7 = document.createElement("div");
+    overviewoder7.setAttribute("class", "overviewoder");
+    overviewoder7.textContent =
+      "• Return Policy : This product is returnable within 30 days of delivery";
+
+    var overviewoder8 = document.createElement("div");
+    overviewoder8.setAttribute("class", "overviewoder");
+    overviewoder8.textContent = "• Product : Sweater";
+
+    var overviewoder8 = document.createElement("div");
+    overviewoder8.setAttribute("class", "overviewoder");
+    overviewoder8.textContent = "• Country of Origin : Bangladesh";
+
+    var overviewoder9 = document.createElement("div");
+    overviewoder9.setAttribute("class", "overviewoder");
+    overviewoder9.textContent =
+      "• Manufactured By : Lifestyle Int Pvt Ltd, 77 Degree Town Centre, Building No. 3, West Wing, Off HAL Airport Road, Yamlur, Bangalore-560037";
+
+    var overviewoder10 = document.createElement("div");
+    overviewoder10.setAttribute("class", "overviewoder");
+    overviewoder10.textContent =
+      "•For Consumer Complainants Contact : Manager Commercial, Lifestyle International Pvt Ltd, 1800-123-1444";
+
+    var overviewoder11 = document.createElement("div");
+    overviewoder11.setAttribute("class", "overviewoder");
+    overviewoder11.textContent = "• Net Quantity : 1 N";
+
+    var socialstickers = document.createElement("div");
+    socialstickers.setAttribute("class", "socialstickers");
+
+    var socialstickersname = document.createElement("div");
+    socialstickersname.setAttribute("class", "socialstickersname");
+    socialstickersname.textContent = "Share    Tweet    Pin    Copy Link";
+
+    var greydiv = document.createElement("div");
+    greydiv.setAttribute("class", "greydiv");
+
+    var reviews = document.createElement("div");
+    reviews.setAttribute("class", "reviews");
+    reviews.textContent = "Reviews";
+
+    var whatdoyouthink = document.createElement("div");
+    whatdoyouthink.setAttribute("class", "whatdoyouthink");
+    whatdoyouthink.innerHTML =
+      "<p1>What do you think about <br>  this product ?</p>";
+
+    // var reviewbox = document.createElement("button");
+    // reviewbox.setAttribute("id", "reviewbox");
+    // reviewsbox.textContent = "WRITE A REVIEW";
+
+    var reviewbutton = document.createElement("button");
+    reviewbutton.setAttribute("id", "reviewbutton");
+    reviewbutton.textContent = "WRITE A REVIEW";
+
+    socialstickers.append(socialstickersname);
+
+    promotionoffer.append(belowoffer);
+    promotionbox.append(
+      offername,
+      promotionoffer,
+      clickcollect1,
+      clickcollect,
+      Payininstallments1,
+      Payininstallments,
+      myorder,
+      pincodeInput,
+      checkbutton
+    );
+
+    extrabox.append(colorname, smallimagebox);
+
+    sizenameguide.append(sizename, sizeguide);
+
+    basketbox.append(selectsize, buttonlast);
+
+    overview.append(
+      overview1,
+      overviewname,
+      overviewoder,
+      overviewoder1,
+      overviewoder2,
+      overviewoder3,
+      overviewoder4,
+      overviewoder5,
+      overviewoder6,
+      overviewoder7,
+      overviewoder8,
+      overviewoder9,
+      overviewoder10,
+      overviewoder11
+    );
+
+    selectsize.append(
+      option1,
+      option2,
+      option3,
+      option4,
+      option5,
+      option6,
+      option7,
+      option8,
+      option9,
+      option10
+    );
+
+    sizebox.append(button1, button2, button3, button4, button5);
+
+    rightdiv.append(
+      priceh1,
+      freeshipinglink,
+      extrabox,
+      sizenameguide,
+      sizebox,
+      basketbox,
+      favourite,
+      promotionbox,
+      overview,
+      socialstickers
+    );
+
+    greydiv.append(reviews, reviewbutton, whatdoyouthink);
+    maindiv.append(rightdiv);
+    belowbox.append(greydiv);
+  }
+</script>

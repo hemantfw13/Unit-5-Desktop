@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping at Max</title>
+    <style>
+      body {
+        font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+      }
+      #left {
+        height: fit-content;
+        width: 70%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 20px;
+        /* height: 600px; */
+      }
+      #right {
+        width: 25%;
+        height: 200px;
+        padding-top: 14px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+      #tp {
+        padding-left: 20px;
+        font-size: 20px;
+      }
+      .rdiv {
+        border-bottom: 1px solid gray;
+      }
+      .hd {
+        border-bottom: 1px solid gray;
+      }
+      .hd > div {
+        border-right: 1px solid gray;
+      }
+      #left > div {
+        height: 200px;
+        border-width: thin;
+        margin: 15px 0px 15px 0px;
+        display: flex;
+      }
+      #left > div > * {
+        height: 80%;
+        margin-right: 2%;
+        width: 18%;
+      }
+      #left > div > :nth-child(3),
+      #left > div > :nth-child(4),
+      #left > div > :nth-child(5) {
+        width: 15%;
+      }
+      img,
+      #f {
+        width: 20%;
+      }
+      #left > div > :nth-child(2) {
+        width: 25%;
+      }
+      #money_symbol {
+        height: 15px;
+      }
+      #right > :nth-child(1),
+      #right > :nth-child(2) {
+        height: 25%;
+        /* border: 1px solid green; */
+      }
+      #btn {
+        background-color: #303ab2;
+        border-color: #303ab2;
+        box-shadow: 0 3px 4px 0 rgb(10 31 68 / 10%),
+          0 0 1px 0 rgb(10 31 68 / 8%);
+        border-radius: 3px;
+        height: 100%;
+        width: 90%;
+        margin-left: 5%;
+        border-radius: 5px;
+        text-align: center;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 11px 10px 10px;
+      }
+      #right > :nth-child(3) {
+        /* height: 100%;
+            width: 18%; */
+        height: 48%;
+      }
+      #right > :nth-child(3) > img {
+        height: 50%;
+        width: 18%;
+      }
+      select,
+      #remove {
+        width: 50%;
+        border-width: thin;
+        margin: 10% 25%;
+      }
+      #remove:hover {
+        cursor: pointer;
+      }
+      .quer {
+        width: 70%;
+        height: 200px;
+        display: grid;
+        grid-template-columns: 44% 30% 20%;
+        gap: 2%;
+      }
+      #also_like {
+        height: 300px;
+        width: 100%;
+      }
+      .ofer {
+        display: flex;
+        gap: 10px;
+      }
+      .ofer > :nth-child(1) {
+        background-color: #ee8787;
+        padding: 4px;
+        color: white;
+      }
+      #use_promo:hover {
+        cursor: pointer;
+      }
+      #promo {
+        height: 50px;
+        width: 50%;
+        display: none;
+        /*  */
+      }
+      #promo > button {
+        background-color: blue;
+        color: white;
+        width: 30%;
+        height: 100%;
+      }
+      #promo > input {
+        width: 70%;
+        border-width: thin;
+        border: 1px solid grey;
+      }
+      .like_div {
+        display: flex;
+        gap: 1%;
+      }
+      .like_div > div {
+        height: 200px;
+        width: 16%;
+      }
+      .like_div > div > img {
+        height: 100%;
+        width: 100%;
+        /* border: 1px solid green; */
+      }
+      .like_div > div > p {
+        text-align: end;
+        width: fit-content;
+        color: white;
+        margin-top: -30px;
+        margin-left: 50%;
+        background-color: aquamarine;
+      }
+      .like_div > div > span {
+        background-color: red;
+        color: white;
+        margin-top: -50px;
+      }
+      #div {
+        display: flex;
+      }
+      /* .ig{
+           width: 200px;
+           height: 50px;
+       } */
+    </style>
+  </head>
+  <body>
+    <div style="width: 80%; margin: auto">
+      <p style="font-size: 26px">Your Shopping Basket</p>
+
+      <div class="ofer">
+        <p>Get the offer</p>
+        <p>Flat 1,000 off on shopping worth 4,499 and above. Use code: MAX1K</p>
+      </div>
+      <div class="ofer">
+        <p>Get the offer</p>
+        <p>Flat 500 off on shopping worth 2,999 and above. Use code: MAX500</p>
+      </div>
+      <div class="ofer">
+        <p>Get the offer</p>
+        <p>Flat 250 off on shopping worth 1,999 and above. Use code: MAX250</p>
+      </div>
+      <div style="display: flex; gap: 20px">
+        <div id="left">
+          <div class="hd" style="height: 30px">
+            <div id="f">Item</div>
+            <div>Description</div>
+            <div>Price</div>
+            <div>Quantity</div>
+            <div>Total Price</div>
+          </div>
+          <img
+            src="https://i1.lmsin.net/website_images/in/logos/logo-max.svg"
+            style="height: 30px; width: 50px"
+            alt=""
+          />
+        </div>
+        <div id="right">
+          <div id="tp"></div>
+          <div>
+            <a href="checkout.html"><button id="btn">Checkout Now</button> </a>
+          </div>
+          <div>
+            <img
+              style="width: 100%; height: 100px"
+              class="ig"
+              src="z.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- <div id="promo">
+            <input type="text" name="" id="inp_promo">
+            <button id="apply_promo">Apply</button>
+        </div> -->
+      <p>
+        <img
+          style="height: 15px; width: 20px"
+          src="https://i1.lmsin.net/website_images/common/images/basket/ico-gift.png"
+          alt=""
+        />Got a Promo Code?
+        <span style="color: blue" id="use_promo">Use it here</span>
+      </p>
+      <div id="promo">
+        <input type="text" name="" id="inp_promo" />
+        <button id="apply_promo" onclick="applypromo()">Apply</button>
+      </div>
+      <img
+        style="height: 15px; width: 20px"
+        src="https://i1.lmsin.net/website_images/in/giftcards/gift-card-icon.svg"
+        alt=""
+      /><span>Have a Gift Card? Redeem it at checkout.</span>
+      <div class="quer">
+        <div>
+          <p>Need help? We're here for you.</p>
+          <p>
+            📞 Call Customer Support at
+            <a href="tel:1800-123-1444">1800-123-1444</a>
+          </p>
+
+          <p>Write to us</p>
+          <p>return policy</p>
+        </div>
+        <div>
+          <p>Subtotal</p>
+          <p>(May INclude shipping charge)</p>
+        </div>
+        <div></div>
+      </div>
+      <div id="also_like">
+        <p>You may also like</p>
+        <div class="like_div">
+          <div>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIIIaZRTiVLVRiArWmqJN1ye-eBubay0DM3w&usqp=CAU"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://10d06a4d12b851f1b2d5-6729d756a2f36342416a9128f1759751.lmsin.net/1000010273919-Yellow-Yellow-1000010273919-9012021_01-50.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://10d06a4d12b851f1b2d5-6729d756a2f36342416a9128f1759751.lmsin.net/1000010270022-Red-Burgundy-1000010270022-8272021_01-50.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/h=150,w=150,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010533070-Blue-Blue-1000010533070-7142021_01-2100.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://lmsin.net/cdn-cgi/image/h=150,w=150,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010674895-Black-Black-1000010674895-10132021_01-2100.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://10d06a4d12b851f1b2d5-6729d756a2f36342416a9128f1759751.lmsin.net/1000010536157-Green-OliveGreen-1000010536157-7142021_01-50.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div id="div">
+        <div>
+          <h2>Subscribe to our awesome emails.</h2>
+          <p style="color: rgb(185, 174, 174)">
+            Get our latest offers and news straight in your inbox.
+          </p>
+          <div>
+            <input type="text" />
+            <button></button>
+          </div>
+        </div>
+        <div id="div">
+          <h2>Subscribe to our awesome emails.</h2>
+          <p style="color: rgb(185, 174, 174)">
+            Get our latest offers and news straight in your inbox.
+          </p>
+          <br />
+          <!-- <div>
+                <img class="logo_apple" src="https://i1.lmsin.net/website_images/misc/apple-app-store.svg" alt="">
+                <img class="logo_android" src="https://i1.lmsin.net/website_images/misc/google-play-store.svg" alt="">
+            </div> -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var total_price_after_coupan = 0;
+    var totalPrice = 0;
+    var counter = 0;
+    function applypromo() {
+      counter++;
+      var promocode = document.getElementById("inp_promo").value;
+      if (promocode === "masai30" && counter == 1) {
+        var tp = document.getElementById("tp");
+        tp.textContent = `Total = ${parseInt(
+          tp.textContent.match(/\d/g).join("") * 0.7
+        )}`;
+        console.log(tp.textContent);
+      }
+      // else{
+      //     tp.textContent=(parseInt(tp.textContent.match(/\d/g).join("")));
+      // }
+
+      totalPrice = tp.textContent;
+
+      console.log(totalPrice);
+      // total()
+      // tp.textContent="Total "+total_price_after_coupan
+    }
+    document.getElementById("use_promo").addEventListener("click", function () {
+      document.getElementById("promo").style.display = "flex";
+    });
+    // function total(){
+    //     cart.map(el=>{
+    //         total_price_after_coupan+=Number((el.price))
+    //     })
+    // }
+
+    var cart = JSON.parse(localStorage.getItem("cart")) || [];
+    var left_div = document.getElementById("left");
+    var l = 5;
+    show_product(cart);
+    var stp = document.getElementsByClassName("stp");
+    var sum = 0;
+    for (var i = 0; i < stp.length; i++) {
+      sum += parseInt(stp[i].textContent.match(/\d/g).join(""));
+    }
+    tp.textContent = `Total ${sum}`;
+    function show_product(cart) {
+      cart.map(function (element) {
+        var div = document.createElement("div");
+        div.setAttribute("class", "rdiv");
+        var img = document.createElement("img");
+        img.setAttribute("src", element.image1);
+        var div2 = document.createElement("div");
+        var prod_title = document.createElement("h5");
+        prod_title.textContent = element.name;
+
+        var size = document.createElement("p");
+        size.textContent = `Size: XL`;
+        div2.append(prod_title, size);
+        var div3 = document.createElement("div");
+        var price = document.createElement("p");
+        price.innerHTML = "&#x20b9 " + element.price;
+        div3.append(price);
+        var div4 = document.createElement("div");
+        var select = document.createElement("select");
+        for (var i = 0; i < 5; i++) {
+          var opt = document.createElement("option");
+          opt.value = i + 1;
+          opt.textContent = i + 1;
+          select.append(opt);
+        }
+        select.addEventListener("change", function (e) {
+          var qty = e.target.value;
+          //console.log(qty)
+          total_price.innerHTML = "&#x20b9 " + qty * element.price;
+          var tp = document.getElementById("tp");
+          var stp = document.getElementsByClassName("stp");
+          var sum = 0;
+          for (var i = 0; i < stp.length; i++) {
+            sum += parseInt(stp[i].textContent.match(/\d/g).join(""));
+          }
+          tp.textContent = `Total ${sum}`;
+        });
+
+        var remove_btn = document.createElement("p");
+        remove_btn.setAttribute("id", "remove");
+        remove_btn.textContent = "Remove";
+        remove_btn.addEventListener("click", function () {
+          div.remove();
+          // cart_product=cart_product.filter(el=>{
+          //     if(el.name == remove_item.name && el.price==remove_item.price){
+          //     }else{
+          //         return el
+          //     }
+          // })
+          var tp = document.getElementById("tp");
+          var stp = document.getElementsByClassName("stp");
+          var sum = 0;
+          for (var i = 0; i < stp.length; i++) {
+            sum += parseInt(stp[i].textContent.match(/\d/g).join(""));
+          }
+          tp.textContent = `Total ${sum}`;
+
+          localStorage.setItem("cart", JSON.stringify(cart_product));
+          console.log(cart_product);
+          location.reload();
+        });
+        div4.append(select, remove_btn);
+        var div5 = document.createElement("div");
+        var total_price = document.createElement("p");
+        total_price.setAttribute("class", "stp");
+        total_price.innerHTML = "&#x20b9 " + element.price;
+        div5.append(total_price);
+        div.append(img, div2, div3, div4, div5);
+        left_div.append(div);
+      });
+    }
+    show_product();
+    // console.log(cart)
+    function remove(element, index) {
+      var remove_item = element;
+      cart = cart.filter((el) => {
+        if (el.name == remove_item.name && el.price == remove_item.price) {
+        } else {
+          return el;
+        }
+        localStorage.removeItem("element.index");
+      });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      // console.log(cart_product)
+      show_product();
+    }
+    localStorage.setItem("price", JSON.stringify(totalPrice));
+    // document.getElementById("use_promo").addEventListener("click",function(){
+    //     document.getElementById("promo").style.display='flex'
+
+    // })
+    // var promo_arr=['MAX1K','MAX500','MAX250']
+    // document.getElementById("apply_promo").addEventListener('click',function(){
+    //     var promo_code=document.getElementById("inp_promo").value
+    //     console.log(promo_code)
+    // })
+    // var btn = document.getElementById("btn")
+    // btn.addEventListener("click",function(){
+    //     console.log("hi")
+    // })
+    //     var sdiv = document.getElementsByClassName("sdiv")
+    //   for(var i=0; i<sdiv.length; i++){
+    //       console.log(sdiv[i].innerHTML)
+    //   }
+    //   console.log("hi",sdiv.length)
+    // })
+  </script>
+</html>

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/36165df214.js" crossorigin="anonymous"></script>
+    <title>Online Shopping at Max</title>
+    <style>
+      *{
+        font-family: "Open Sans", sans-serif;
+      }
+        /* <------------header style----------> */
+         .navbar ul{
+          
+          list-style: none;
+          position: relative;
+          margin: 0;
+          padding: 0;
+          float: left;
+          background-color:white;
+
+    }
+    .navbar ul a{
+          text-decoration: none;
+          padding: 0 20px;
+          line-height:40px;
+          display: block;
+    }
+    .navbar ul li{
+          float: left;
+          position: relative;
+          margin: 0;
+
+     }
+    .navbar ul ul{
+          position:fixed;
+          background-color: white;
+          display:none;
+     }
+    .navbar ul ul li{
+          display: flex;
+          position: relative;
+          float: left;
+          justify-content: space-evenly;
+ 
+     }
+    .navbar ul li:hover ul{
+          display: flex;
+          display: block;
+          float: left;
+          left: 0;
+          
+    }
+    #first ul {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #first {
+        background-color: black;
+        margin-bottom: 20px;
+
+        width: auto;
+        height: 55px;
+        padding-top: 5px;
+      }
+      #whitelink{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: "Open Sans", sans-serif;
+        margin-top: 1px;
+      }
+      
+      #blacklink{
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight:bolder;
+        font-family: "Open Sans", sans-serif;
+        margin-left: 10px;
+        
+      }
+      
+      input[type*="c"] {
+        width: 450px;
+        height: 40px;
+        background-color: rgb(235, 235, 235);
+        margin-top: 1px;
+        border: none;
+        margin-right: 100px;
+        margin-left: 5px;
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+      }
+      #otherblacklink{
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bolder;
+        font-family: "Open Sans", sans-serif;
+        padding-left: 100px;
+      }
+
+      /* <--------------foooter style----------------> */
+
+        #box {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        height: 250px;
+        width: 1300px;
+        margin: auto;
+        margin-top: 60px;
+        
+      }
+        #box2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px 100px;
+        gap: 20px;
+     
+        height: 250px;
+        width: 1300px;
+        margin: auto;
+        margin-top: 30px;
+      }
+        .head {
+        font-size: 25px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bolder;
+      }
+      .head2 {
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+      }
+      .sub {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+        color: rgb(160, 159, 159);
+      }
+      input[type="email"] {
+        width: 400px;
+        height: 55px;
+        background-color: rgb(236, 232, 232);
+        margin-top: 5px;
+        border: none;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .emailsub {
+        height: 90x;
+        width: 800px;
+        margin-top: 15px;
+      }
+      .newbutton {
+        background-color: black;
+        border-radius: 1px;
+        border: 0px;
+        height: 55px;
+        width: 220px;
+        color: whitesmoke;
+        margin: auto;
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .playstore {
+        height: 90x;
+        width: 450px;
+       
+        margin-top: 20px;
+       
+
+      }
+      .applestore{
+      
+        height: 65px;
+        width: 200px;
+        background-image: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/en/app-store-badge-us-black.svg);
+        display:inline-block;
+        background-repeat: no-repeat;
+        background-size: 200px 65px;
+        vertical-align: top;
+        margin-top: 5px;
+
+      }
+      .play{
+        
+        height: 75px;
+        width: 200px;
+        background-image: url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/en/google-play-badge-us.svg);
+        display:inline-block;
+        background-repeat: no-repeat;
+        background-size: 200px 75px;
+        vertical-align: top;
+
+      }
+      .lasthead{
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bolder;
+      }
+      #greylink{
+        color: #928477;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+      }
+      
+      #lastbox{
+        margin-top: 300px;
+        display: grid;
+     
+        border-top:1px solid rgb(206, 206, 206);
+        border-bottom:1px solid rgb(206, 206, 206);
+        height: 250px;
+        width: 1350px;
+       margin-left: 5%;
+        
+      }
+        .contact{
+         
+          border:bottom;
+          height: 125px;
+        width: 1350px;
+        border-bottom:1px solid rgb(206, 206, 206);
+      
+        display:inline-block;
+
+        }
+        .about{
+        height: 123px;
+        width: 1350px;
+        }
+        .one{
+          height:120px;
+          width:215px;
+       
+          display:inline-block;
+          vertical-align: top;
+          /* padding-left: 115px; */
+
+        }
+        .one1{
+          height:120px;
+          width:300px;
+          
+          display:inline-block;
+          vertical-align: top;
+          /* padding-left: 300px; */
+          
+
+        }
+        .vehicle{
+          font-size:20px;
+          color:white;
+          margin-right: 10px;
+        }
+        .basket{
+          font-size:20px;
+          color:black;
+          margin-top: 10px;
+        }
+        .facebook{
+          font-size:35px;
+          color:black;
+          margin-top: 30px;
+          margin-right: 20px;
+        }
+        .search{
+          font-size:20px;
+          color:black;
+         
+          margin-left: 50px;
+          color:gray;
+          
+        }
+        .phone{
+          font-size:35px;
+          color:black;
+          margin-right: 10px;
+        
+        }
+        #bar{
+            background-color:#303ab2;
+            color:white;
+            margin: auto;
+            text-align:center;
+            height:35px;
+        }
+        #bar a{
+            text-decoration:none;
+            color:white;
+            font-size: 20px;    
+            margin-top: 5px;
+            text-align: center;
+            padding: 100px;
+        }
+       
+        #boxx{
+          width:60%;
+          height: 450px;
+          background-color:blue;
+          margin: auto;
+          margin-top:50px;
+        }
+        #boxx img{
+          width:100%;
+          height:100%;
+        }
+        #nxtbox{
+           
+            margin: auto;
+            text-align:center;
+            height: 100px;
+            width:60%;
+            margin-top:50px;
+        }
+        #nxtbox img{
+          width:100%;
+          height:100%;
+        }
+        hr{
+          width:60%;
+        }
+        #pp{
+          font-size:50px;
+          margin-left:20%
+        }
+        #degree{
+          display: flex;
+          margin-left:20%;
+          gap:10px;
+        }
+        #degree img{
+          width:100%;
+        }
+        #imgboks{
+          width:60%;
+          margin-left:20%;
+        }
+        .smallimg{
+         
+          display: flex;
+         
+        }
+        .smallimg img{
+          width:100%
+        }
+       #box3{
+        width:60%;
+        /* height:600px; */
+          margin-left:20%;
+       }
+       .bigimg{
+         
+         display: flex;
+        
+       }
+       .bigimg img{
+         width:100%;
+         /* height:100%; */
+       }
+
+
+        
+
+
+    </style>
+</head>
+<body>
+
+    <!-- <-------------header----------------> 
+    <div id="first">
+        <ul>
+          <li> 
+            <i class="fas fa-truck vehicle"></i>
+            <a id="whitelink" href="">Free Shipping</a>
+          </li>
+          <li>
+            <i class="fas fa-store-alt vehicle"></i>
+            <a id="whitelink"  href="">Return To Store</a></li>
+          <li>
+            <i class="fas fa-store-alt vehicle"></i>
+            <a id="whitelink"  href="">Click & collect</a></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li><a id="whitelink"  href="">Download Our Apps</a></li>
+          <li><a id="whitelink"  href="">Store Locator</a></li>
+          <li><a id="whitelink"  href="">Help</a></li>
+        </ul>
+      </div>
+  
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">
+            <img width="50px" height="40px" src="https://i1.lmsin.net/website_images/logos/max/ae/en/logo-max.svg">
+          </a></li>
+          <li>
+            <a id="blacklink" href="womensfront.html">Women </a>
+            <ul>
+              <li><a  id="blacklink" href="WomenProductPage.html">Tops</a></li>
+              <li><a  id="blacklink" href="">Bottoms</a></li>
+              <li><a  id="blacklink" href="">Dresses & Jumpsuits</a></li>
+              <li><a  id="blacklink" href="">Sportswear</a></li>
+              <li><a  id="blacklink" href="">Winterwear</a></li>
+              <li><a  id="blacklink" href="">Ethnic Wear</a></li>
+              <li><a  id="blacklink" href="">Lingerie</a></li>
+              <li><a  id="blacklink" href="">Sleepwear</a></li>
+              <li><a  id="blacklink" href="">Accessories</a></li>
+              <li><a  id="blacklink" href="">Shoes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a id="blacklink"  href="mensfront.html">Men </a>
+            <ul>
+              <li><a  id="blacklink" href="">Bottoms</a></li>
+              <li><a  id="blacklink" href="">Sportswear</a></li>
+              <li><a  id="blacklink" href="">Tops</a></li>
+              <li><a  id="blacklink" href="">Loungewear</a></li>
+              <li><a  id="blacklink" href="">Innerwear</a></li>
+              <li><a  id="blacklink" href="menProductPage.html">Indian Wear</a></li>
+              <li><a  id="blacklink" href="">Accessories</a></li>
+              <li><a  id="blacklink" href="">Shoes</a></li>
+              <li><a  id="blacklink" href="">Winterwear</a></li>
+              <li><a  id="blacklink" href="">The Shirt Shop</a></li>
+              <li><a  id="blacklink" href="">More</a></li>
+            </ul>
+          </li>
+          <li>
+            <a id="blacklink"  href="girls.html"> Girls</a>
+  
+            <ul>
+              <li><a id="blacklink" href="">Tops</a></li>
+              <li><a id="blacklink" href="">Bottoms</a></li>
+              <li><a id="blacklink" href="">Essentials</a></li>
+              <li><a id="blacklink" href="">Accessories</a></li>
+              <li><a id="blacklink" href="">Shoes</a></li>
+              <li><a id="blacklink" href="">Indian Wear</a></li>
+              <li><a id="blacklink" href="">Winterwear</a></li>
+              <li><a id="blacklink" href="">More</a></li>
+            </ul>
+          </li>
+          <li>
+            <a id="blacklink"  href="boys.html"> Boys</a>
+                      <ul>
+              <li><a  id="blacklink" href="">Tops</a></li>
+              <li><a  id="blacklink" href="">Bottoms</a></li>
+              <li><a  id="blacklink" href="">Essentials</a></li>
+              <li><a  id="blacklink" href="">Accessories</a></li>
+              <li><a  id="blacklink" href="">Shoes</a></li>
+              <li><a  id="blacklink" href="">Indian Wear</a></li>
+              <li><a  id="blacklink" href="">Winterwear</a></li>
+              <li><a  id="blacklink" href="">More</a></li>
+            </ul>
+          </li>
+          <li>
+            <i class="fas fa-search search"></i>
+            <input type="text c" placeholder="What are you looking for?" /></li>
+  
+            <li><a id="blacklink" href="Signup.html"> Sign Up - Sign In</a></li>
+            <li><a id="blacklink" href="basket.html">Basket</a></li>  
+          <i class="fas fa-lock basket"></i>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <!-- -----------------container----------------- -->
+<div id="bar">
+     <h4><a href="">Buy 3 @	&#8377; 699/999/1499 + Extra &#8377;1000 off on &#8377;4999. Code: MAX1K </a></h4>
+</div>
+<div id="boxx">
+  <a href="menProductPage.html"><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/MAX-Banner2-desktop-Men-27Oct2021.jpg" alt=""> </a>  
+</div>
+<div id="nxtbox">
+  <img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-D-Men-27Oct2021.jpg" alt="">
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Shop By °C</p>
+<div id="degree">
+  <div>
+    <img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=450,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock15One-Men-26Oct2021.jpg">
+  </div>
+  <div>
+    <img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=450,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock15Two-Men-26Oct2021.jpg" alt="">
+  </div>
+</div>
+<br>
+<br>
+<br>
+<hr>  
+<p id="pp">Shop By Category</p>
+<div id="imgboks">
+  <div class="smallimg">
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-1-Desktop-Men-26Oct2021.jpg" alt=""></div>
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-2-Desktop-Men-26Oct20211.jpg" alt=""></div>
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-3-Desktop-Menn-26Oct2021.jpg" alt=""></div>
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-4-Desktop-Men-26Oct2021.jpg" alt=""></div>
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-5-Desktop-Men-26Oct2021.jpg" alt=""></div>
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-6-Desktop-Men-26Oct2021.jpg" alt=""></div>
+</div>
+<div class="smallimg">
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-7-Desktop-Men-26Oct2021.jpg" alt=""></div>
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-8-Desktop-Men-26Oct2021.jpg" alt=""></div>
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-9-Desktop-Men-26Oct2021.jpg" alt=""></div>
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-10-Desktop-Men-26Oct2021.jpg" alt=""></div>
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-11-Desktop-Men-26Oct2021.jpg" alt=""></div>
+    <div><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/PC-A-12-Desktop-Men-26Oct2021.jpg" alt=""></div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+</div>
+<p id="pp">Season's Best Finds</p>
+<div id="box3">
+  <div class="bigimg">
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock18One-Men-26Oct2021.jpg" alt=""></div>
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock18Two-Men-26Oct2021.jpg" alt=""></div>
+  </div>
+ 
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Budget Zone</p>
+<div id="box3">
+  <div class="bigimg">
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19One-Women-26Oct2021.jpg" alt=""></div>
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Two-Women-26Oct2021.jpg" alt=""></div>
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Three-Women-26Oct2021.jpg" alt=""></div>
+  </div>
+ 
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Trend Alert</p>
+<div id="box3">
+  <img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=1140,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-10modularblock-oneBythree-A-Men-26Oct2021.jpg">
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Back To Work</p>
+<div id="box3">
+  <img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=1140,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-11modularblock-oneBythree-A-Mens-26Oct2021.jpg">
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Season's Best Finds</p>
+<div id="box3">
+  <div class="bigimg">
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-Men-26Oct2021.jpg" alt=""></div>
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1B-Mens-26Oct2021.jpg" alt=""></div>
+  </div>
+ 
+</div>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<div id="box3">
+  <div class="bigimg">
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock7-oneBythree-A-Men-26Oct2021.jpg" alt=""></div>
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock7-oneBythree-B-Menn-26Oct2021.jpg" alt=""></div>
+  </div>
+ 
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Winter Must Haves</p>
+<div id="box3">
+  <img  style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=1140,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock16One-Men-26Oct2021.jpg">
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Max Loves</p>
+<div id="box3">
+  <img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=1140,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock13One-Men-26Oct2021.jpg">
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Online Exclusives</p>
+<div id="box3">
+  <img  style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBythree-A-Common-02Nov2021.jpg">
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">The Shirt Shop
+</p>
+<div id="box3">
+  <img  style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/department-modularblock-oneBythree-A-Men-26Oct2021.jpg">
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Shades Of Winter
+
+</p>
+<div id="box3">
+  <div class="bigimg">
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock17One-Men-26Oct2021.jpg" alt=""></div>
+    <div ><img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock17Two-Men-26Oct2021.jpg" alt=""></div>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Gifting Zone
+</p>
+<div id="box3">
+  <img  style="width: 100%; height:100%"src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock14One-Men-26Oct2021.jpg">
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p id="pp">Connect With Us
+</p>
+<div id="box3">
+  <img style="width: 100%; height:100%" src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock8-oneBythree-A-Women-21Oct2020.jpg">
+</div>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+
+
+     <!-- <----------------footer----------------> 
+              <div id="box2">
+                <div>
+                  <p class="head">Subscribe to our awesome emails.</p>
+                  <p class="sub">
+                    Get our latest offers and news straight in your inbox.
+                  </p>
+                </div>
+          
+                <div>
+                  <p class="head">Download our apps</p>
+                  <p class="sub">Shop our products and offers on the go.</p>
+                </div>
+                <div class="emailsub">
+                  <input type="email" placeholder="Please enter an email address" />
+                  <button class="newbutton">Subcribe</button>
+                </div>
+          
+                <div class="playstore">
+                    <div class="applestore">
+                    </div>
+                    <div class="play">
+                      </div>
+                  
+                  </div>
+                </div>
+              </div>
+          
+              <div id="box">
+                <div>
+              
+                  <ul type="none">
+                    <li><p class="lasthead">Women</p></li>
+                   <a id="greylink"href=" "><li>Tops</li></a>
+                   <a id="greylink" href=" "><li>Bottoms</li></a>
+                   <a id="greylink"href=" "><li>Dresses & Jumpsuits</li></a>
+                   <a id="greylink" href=" "><li>Sportswear</li></a>
+                   <a id="greylink" href=" "><li>Winterwear</li></a>
+                   <a id="greylink" href=" "><li>Ethnic Wear</li></a>
+                   <a id="greylink" href=" "><li>Lingerie</li></a>
+                   <a id="greylink" href=" "><li>Sleepwear</li></a>
+                   <a id="greylink" href=" "><li>Accessories</li></a>
+                   <a id="greylink" href=" "><li>Shoes</li></a>
+                 </ul>
+                </div>
+                <div>
+                  <ul type="none">
+                    <li><p class="lasthead">Men</p></li>
+                  <a id="greylink" href=""><li>Tops</li></a>
+                  <a id="greylink" href=" "><li>Bottoms</li></a>
+                  <a id="greylink" href=" "><li>Sportswear</li></a>
+                  <a id="greylink" href=" "><li>Winterwear</li></a>
+                  <a id="greylink" href=" "><li>Accessories</li></a>
+                  <a id="greylink" href=" "><li>Shoes</li></a>
+                </ul>
+                </div>
+                <div>
+                  <ul type="none">
+                    <li><p class="lasthead">Boys</p></li>
+                  <a id="greylink" href=" "><li>Tops</li></a>
+                  <a id="greylink" href=" "><li>Bottoms</li></a>
+                  <a id="greylink" href=" "><li>Indian Wear</li></a>
+                  <a id="greylink" href=" "><li>Winterwear</li></a>
+                  <a id="greylink" href=" "><li>Essentials</li></a>
+                  <a id="greylink" href=" "><li>Accessories</li></a>
+                  <a id="greylink" href=" "><li>Shoes</li></a>
+                </ul>
+                </div>
+                <div>
+                  <ul type="none">
+                    <li><p class="lasthead">Girls</p></li>
+                  <a id="greylink" href=" "><li>Tops</li></a>
+                  <a id="greylink" href=" "><li>Bottoms</li></a>
+                  <a id="greylink" href=" "><li>Indian Wear</li></a>
+                  <a id="greylink" href=" "><li>Winterwear</li></a>
+                  <a id="greylink" href=" "><li>Essentials</li></a>
+                  <a id="greylink" href=" "><li>Accessories</li></a>
+                  <a id="greylink" href=" "><li>Shoes</li></a>
+                </ul>
+          
+                </div>
+                <div>
+                  <ul type="none">
+                    <li><p class="lasthead">Explore</p></li>
+                  <a id="greylink" href=" "><li>Offers</li></a>
+                  <a id="greylink" href=" "><li>Magazine</li></a>
+                  </ul>
+                </div>
+                <div>
+                  <ul type="none">
+                    <li><p class="lasthead">About</p></li>
+                  <a id="greylink" href=" "><li>About us</li></a>
+                  <a id="greylink" href=" "><li>Write to us</li></a>
+                  <a id="greylink" href=" "><li>Careers</li></a>
+                  <a id="greylink" href=""><li>Take a tour</li></a>
+                  <a id="greylink" href=" "><li>Blog</li></a>
+                  <a id="greylink" href=" "><li>Store Locator</li></a>
+                  <a id="greylink" href=" "><li>Landmark Cares</li></a>
+                </ul>
+                </div>
+                <div>
+                  <ul type="none">
+                      <li><p class="lasthead">Help</p></li>
+                      <a id="greylink"href=""><li>Contact us</li></a>
+                      <a id="greylink" href=" "><li>Shipping</li></a>
+                      <a id="greylink" href=" "><li>Return Process</li></a>
+                      <a id="greylink" href=" "><li>Return Policy</li></a>
+                      <a id="greylink"href=" "><li>Help Centre</li></a>
+                  </ul>
+                </div>
+                
+              </div>
+          
+              <div id="lastbox">
+                     <div class="contact">
+                      
+                       <div class="one">
+                      
+                        <p class="sub">Talk to us</p>
+                        <p class="head2">1800-123-1444
+                       </div>
+                       <div class="one">
+          
+                        <p class="sub">Helpcenter</p>
+                        <p class="head2">help.maxfashion.com</p>
+          
+                       </div>
+          
+                       <div class="one"><p class="sub">Write to us</p>
+                        <p class="head2">help.in@maxfashion.com
+                          </p>
+                        </div>
+                       <div class="one">
+                        <i class="fab fa-facebook-f facebook"></i>
+                        <i class="fab fa-twitter facebook"></i>
+                        <i class="fab fa-instagram facebook"></i>
+                        </div>
+          
+                     </div>
+                     <div class="about">
+          
+          
+                                 <div class="one1">
+                        <p class="sub">© 2021 Retail World Limited.</p>
+                        <p class="sub">Terms & Conditions - Privacy Policy
+                         
+                          </p>
+                        </div>
+                     </div>
+            
+                </div>
+</body>
+</html>
